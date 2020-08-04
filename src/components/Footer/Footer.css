@@ -1,0 +1,100 @@
+.footerRow__Main{
+    width: 100%;   
+    position:fixed;
+    bottom: 0;
+    display: flex;
+    border-top:2px solid #2e2e2e;
+}
+.footerRow__StockList{
+    display: flex;
+    align-items: center;    
+    padding: 0px 12px;   
+    flex: 0.6; 
+}
+.footerRow__Main .footerRow__StockListName{
+    color: #d8aa49 !important;
+    font-size: 18px;
+    font-weight:700;
+    text-transform: uppercase;
+    padding: 0px 18px;
+}
+.footerRow__StockName{    
+    margin: 0px 8px ;
+    padding: 6px 18px; 
+    align-items: center;
+    justify-content: flex-end;
+    border-left: 1px solid #2e2e2e;
+}
+.footerRow__StockName > .stockName__name{
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.footerRow__StockName > .stockName__price{
+color:green;
+text-transform: uppercase;
+font-size: 12px;
+}
+.footerRow__StockName > .stockName__status{
+color:red;
+text-transform: uppercase;
+font-size: 12px;
+}
+.footer__leftCurve{ 
+    height:0px;
+    width: 20px;
+    border-bottom: 60px solid #2e2e2e;
+    border-left: 100px solid transparent;
+}
+.footerRow__leftSide{
+    background-color: #2e2e2e;
+    display: flex;
+    align-items: center;    
+    flex: 0.4; 
+    justify-content: flex-end;
+}
+.footerRow__leftSideBet{
+    color: #d8aa49 !important;
+    text-transform: uppercase;
+    align-items: center;  
+    display: flex;
+    font-weight: 600;
+    margin-right: 40px;
+}
+.footerRow__leftSideBet .currentBetAmount{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    border:1px solid #d8aa49;
+    border-radius: 4px ;
+    padding: 4px 12px;
+}
+.footerRow__leftSide > button{  
+    background-color: #323232;
+    align-items: center;  
+    display: flex;
+    padding: 0px 24px;
+    color: #e2b727 !important;
+    border-left: 1px solid #4b4b4a !important;
+    height: 100%;
+    text-align: center;
+    font-size: 30px !important;
+    cursor: pointer;
+    outline: none !important;
+    border-top:none !important;
+}
+.footerRow__leftSide > button .icon{
+    font-size: 30px;
+}
+.footerRow__leftSide > button:focus{
+    border:none;
+    background-color: #252525;
+}
+.footerRow__leftSide > button:hover{
+
+    background-color: #252525;
+}
+.currentBetAmount .icon{
+    margin-right: 10px;
+    
+}
