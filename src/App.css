@@ -6,3 +6,15 @@
   height: 100%;
   background-size: cover;
 }
+.AppMain__wrapper{
+  display: flex;
+}
+.AppMain__roadMap{
+  flex: 0.4;
+  display: flex;
+}
+.AppMain__gamerLobby{
+  border:1px solid #FFF;
+  flex: 0.6;
+  display: flex;
+}

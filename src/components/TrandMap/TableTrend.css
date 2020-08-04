@@ -1,0 +1,39 @@
+.tableTrend__wrapper {
+  background-color: #e7bb27;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.tableTrend__firstDigit {
+  padding: 4px;
+  background-color: #2f5f2a;
+  border-collapse: collapse; 
+  border-spacing: 1;
+}
+
+.tableTrend__firstDigit tr td {
+  height: 22px;
+  width: 22px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 3px;
+  margin: 2px !important;
+  text-align: center;
+
+}
+.tableTrend__firstDigit table{
+  border-spacing: 10;
+}
+.tableTrend__firstDigit .bigDigit {
+  background-color: #4971ff;
+  margin:5px;
+}
+.tableTrend__firstDigit .firstDigit {
+    background-color: #FFF;
+    color: #4971ff;
+    margin:5px;
+  }
+.section {
+    border-top: 1em solid transparent;
+  }

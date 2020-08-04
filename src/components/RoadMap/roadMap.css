@@ -1,0 +1,27 @@
+.roadMap__wrapper {
+  padding: 50px 40px;
+}
+.roadMap__option > button {
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #e7bb27;
+  padding: 6px 14px;
+  font-size: 16px;
+  color: #e7bb27;
+  font-weight: 600;
+  cursor: pointer;
+}
+.roadMap__option .firstDigit {
+  background-color: #303b77;
+  border-top-left-radius: 4px;
+}
+.roadMap__option .lastDigit {
+  background-color: #653e21;
+}
+.roadMap__option .bothDigit {
+  background-color: #2f5f2a;
+}
+.roadMap__option .twoDigit {
+  background-color: #a72a2c;
+  border-top-right-radius: 4px;
+}

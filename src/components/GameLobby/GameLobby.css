@@ -1,0 +1,29 @@
+
+.gameLobby__wrapper{
+   width: 100%;
+   
+    border:1px solid red;
+}
+.gameLobby__StockInfo{
+    border:1px solid red;
+    width: 100%;
+    
+   
+}
+.gameLobby__Betting{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.gameLobby__SelectStock {
+    flex: 0.2;
+    border:1px solid red;
+}
+.gameLobby__GameRule {
+    flex: 0.6;
+    border:1px solid red;
+}
+.gameLobby__StockRule{
+    flex: 0.2;
+    border:1px solid red;
+}
