@@ -10,10 +10,10 @@
   display: flex;
 }
 .AppMain__roadMap{
-  flex: 0.4;
+  flex: 0.3;
   display: flex;
 }
 .AppMain__gamerLobby{
-  flex: 0.6;
+  flex: 0.7;
   display: flex;
 }
