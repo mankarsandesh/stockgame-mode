@@ -1,16 +1,29 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
 import VolumeMuteIcon from "@material-ui/icons/VolumeMute";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import FullscreenIcon from "@material-ui/icons/Fullscreen";
-import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+
+
+import Button from '@material-ui/core/Button';
+
+
 import "./Footer.css";
 
-function Footer() {
+import Invitation from "../Invitation/Invitation";
+
+export default function Footer() {
+
+
+
   return (
+
     <div className="footerRow__Main">
+
+
+
+
       <div className="footerRow__StockList">
         <div className="footerRow__StockListName">Stock List</div>
         <div className="footerRow__StockName">
@@ -52,28 +65,30 @@ function Footer() {
             <MonetizationOnIcon className="icon" /> 10,000.00
           </span>
         </div>
-        <button>
+        <Button>
           <VolumeMuteIcon className="icon" />{" "}
-        </button>
+        </Button>
 
-        <button>
+        <Button>
           <NotificationsIcon className="icon" />{" "}
-        </button>
+        </Button>
 
-        <button>
+        <Button>
           <HelpOutlineIcon className="icon" />{" "}
-        </button>
+        </Button>
 
-        <button>
+        <Button>
           <FullscreenIcon className="icon" />{" "}
-        </button>
+        </Button>
 
-        <button>
-          <QuestionAnswerIcon className="icon" />{" "}
-        </button>
+
+        {/* User Invitation Request to Other Users */}
+        <Invitation />
+        
+
       </div>
     </div>
   );
 }
 
-export default Footer;
+

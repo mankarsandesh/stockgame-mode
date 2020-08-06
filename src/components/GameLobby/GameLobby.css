@@ -189,14 +189,6 @@
   box-shadow: 0px 1px 25px 5px rgba(245, 217, 139, 1);
 }
 
-350px: 350px; /* sets width and height */
-32px: 32px; /* the width of each pit. 32 seems to work best*/
-@rotate: (360 / @to)+0deg; /* how far to rotate each slice depends on how many slices you have*/
-
-@rimsize: 6px; /* size of the bevelled rim edge*/
-@trim: gold; /* or hex value*/
-@spinButton: green; /* or hex value*/
-@resetButton: darkgreen; /* or hex value*/
 
 
 .plate {
