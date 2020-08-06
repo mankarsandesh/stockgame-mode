@@ -190,10 +190,10 @@ export default function Invitation() {
                                                 className="Invitation__SelectData"
                                                 value=" "
                                             >
-                                                <MenuItem value=" ">Winning rate / Follower</MenuItem>
-                                                <MenuItem value={10}>BTC1</MenuItem>
-                                                <MenuItem value={20}>SHOOOO</MenuItem>
-                                                <MenuItem value={30}>SHOOOO32</MenuItem>
+                                                <MenuItem value=" ">Select </MenuItem>
+                                                <MenuItem value={10}>Winning Rank</MenuItem>
+                                                <MenuItem value={20}>Winning Rate</MenuItem>
+                                                <MenuItem value={30}>Total Follower</MenuItem>
                                             </Select>
 
                                             <Button> Send Invitation</Button>
