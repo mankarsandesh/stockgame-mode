@@ -1,54 +1,192 @@
-import React, { useState } from 'react';
-import './Header.css';
-import DescriptionIcon from '@material-ui/icons/Description';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import MoneyIcon from '@material-ui/icons/Money';
-import ShowChartIcon from '@material-ui/icons/ShowChart';
-import TrendingDownIcon from '@material-ui/icons/TrendingDown';
+import React, { useState } from "react";
+import "./Header.css";
+import DescriptionIcon from "@material-ui/icons/Description";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import MoneyIcon from "@material-ui/icons/Money";
+import ShowChartIcon from "@material-ui/icons/ShowChart";
+import TrendingDownIcon from "@material-ui/icons/TrendingDown";
+
+import VideoCallIcon from "@material-ui/icons/VideoCall";
+import AppsIcon from "@material-ui/icons/Apps";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import Avatar from "@material-ui/core/Avatar";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
 
 
-import VideoCallIcon from '@material-ui/icons/VideoCall';
-import AppsIcon from '@material-ui/icons/Apps';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import Avatar from '@material-ui/core/Avatar';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import Popover from '@material-ui/core/Popover';
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+
+import Tab from '@material-ui/core/Tab';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import PropTypes from 'prop-types';
+
+
+import StockList from "../pages/StockList/StockList";
+import GameRule from "../pages/GameRule/GameRule";
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={1}>
+          {children}
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
 
 function Header() {
-    const [inputSearch, setInputSearch] = useState("");
-    return (
-        <div className="header">
+  const [inputSearch, setInputSearch] = useState("");
 
-            <div className="header__left">
-                <img className="header__logo"
-                    src="http://ecglao.com/logo/logo.png" />
-                <button> <DescriptionIcon className="icon" /> Rule</button>
-                <button> <FavoriteBorderIcon className="icon" /> leaderboard</button>
-                <button> <MoneyIcon className="icon" /> Current bet</button>
-                <button> <ShowChartIcon className="icon" /> Stock List</button>
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
+
+
+
+  return (
+    <div className="header">
+
+
+
+      <div className="header__left">
+        <img className="header__logo" src="http://ecglao.com/logo/logo.png" />
+        <button>
+          {" "}
+          <DescriptionIcon className="icon" /> Rule
+        </button>
+        <button>
+          {" "}
+          <FavoriteBorderIcon className="icon" /> leaderboard
+        </button>
+        <button>
+          {" "}
+          <MoneyIcon className="icon" /> Current bet
+        </button>
+        <button onClick={handleOpen}>
+          {" "}
+          <ShowChartIcon className="icon" /> Stock List
+        </button>
+
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className="header__model"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <div className="header__paper">
+             
+                <Box className="header__AllPage">
+                  <Paper  >
+                    <Tabs
+                      className="header__AllPageTabs"
+                      value={value}
+                      
+                      textColor="white"
+                      onChange={handleChange}
+
+                    >
+                      <Tab label="Game Rule" />
+                      <Tab label="Current Bet" />
+                      <Tab label="Bet History" />
+                      <Tab label="Stock List" />
+                      <Tab label="setting" />
+                    </Tabs>
+                    <TabPanel value={value} index={0} className="header__AllPageTabPanel">
+                      <GameRule />
+                    </TabPanel>
+                    <TabPanel value={value} index={1} className="header__AllPageTabPanel">
+                    <h2> Current Bet</h2>
+                    </TabPanel>
+                    <TabPanel value={value} index={2} className="header__AllPageTabPanel">
+                    <h2> Bet History</h2>
+                    </TabPanel>
+                    <TabPanel value={value} index={3} className="header__AllPageTabPanel">
+                          {/* Call Stock List Components */}
+                        <StockList />
+                    </TabPanel>
+                    <TabPanel value={value} index={4} className="header__AllPageTabPanel">
+                    <h2> Setting</h2> 
+                    </TabPanel>
+                  </Paper>
+                </Box>
+              
+
             </div>
-            <div className="header__leftCurve">                
-            </div>
-            <div className="header__stock">
-                <h2>USINDEX: <span> $9,03245 </span></h2>
-                <button><TrendingDownIcon className="icon" /> Full Featured Chart</button>
-            </div>
-            <div className="header__icons">
+          </Fade>
+        </Modal>
 
-                <Avatar alt="Sandesh Mankar" src="https://miro.medium.com/max/3150/2*fQO45CfgZstbBjeHxeSxHA.jpeg"></Avatar>
 
-                <AttachMoneyIcon className="icon" />
 
-                <div className="header__userAccount">
-                    <h2>Sandesh Mankar</h2>
-                    <p>10,000.00</p>
-                </div>
-              <ExpandMoreIcon className="icon" />      
+      </div>
+      <div className="header__leftCurve"></div>
+      <div className="header__stock">
+        <h2>
+          USINDEX: <span> $9,03245 </span>
+        </h2>
+        <button>
+          <TrendingDownIcon className="icon" /> Full Featured Chart
+        </button>
+      </div>
+      <div className="header__icons">
+        <Avatar
+          alt="Sandesh Mankar"
+          src="https://miro.medium.com/max/3150/2*fQO45CfgZstbBjeHxeSxHA.jpeg"
+        ></Avatar>
 
-            </div>
+        <AttachMoneyIcon className="icon" />
 
+        <div className="header__userAccount">
+          <h2>Sandesh Mankar</h2>
+          <p>10,000.00</p>
         </div>
-    )
+        <ExpandMoreIcon className="icon" />
+      </div>
+    </div>
+  );
 }
-export default Header
+export default Header;

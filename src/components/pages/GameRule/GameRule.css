@@ -1,0 +1,21 @@
+.header__AllPageTabPanel > p{
+    color: #FFF;
+}
+.header__AllPageTabPanel > button{
+    display: flex;
+    height: 35px !important;
+    align-items: center;
+    margin:20px 0px;
+    border: 2px solid #e3b846;
+    background-color: #982229;
+    color: #d8aa49;
+    border-radius: 30px;
+    padding: 0px 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.header__PageAccordionSummary{
+    font-weight: 800;
+}
+
+

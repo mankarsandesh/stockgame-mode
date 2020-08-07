@@ -25,8 +25,7 @@ import Select from '@material-ui/core/Select';
 import "./Invitation.css";
 
 function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-    console.log("props", props);
+    const { children, value, index, ...other } = props;   
     return (
         <div
             role="tabpanel"
@@ -38,7 +37,6 @@ function TabPanel(props) {
             {value === index && (
                 <Box p={1}>
                     {children}
-
                 </Box>
             )}
         </div>

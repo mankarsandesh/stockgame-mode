@@ -1,0 +1,27 @@
+.header__AllPageTabPanel{
+    padding: 10px 40px;
+    background-color:#191818 !important;
+  }
+  .header__AllPageTabPanel  h2{
+    margin: 0;
+    color: #cfa640;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .header__PageStockList table{
+    width: 100%;
+    color: #FFF;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .header__PageStockList table tr:first-child {
+    background-color:#292828 !important;
+  }
+  
+  .header__PageStockList table tr td {
+    padding:15px 40px;
+    text-align: left;
+  }
