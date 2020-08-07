@@ -1,0 +1,13 @@
+.betHistory_data {
+  background-color: #191818;
+  color: #fff !important;
+}
+.betHistory_dataHeader {
+  text-align: center;
+}
+.betHistory_data .betHistory__TableCell {
+  background-color: #191818;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}

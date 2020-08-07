@@ -33,6 +33,7 @@ import PropTypes from 'prop-types';
 
 import StockList from "../pages/StockList/StockList";
 import GameRule from "../pages/GameRule/GameRule";
+import BetHistory from "../pages/BetHistory/BetHistory";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -94,7 +95,7 @@ function Header() {
         </button>
         <button>
           {" "}
-          <FavoriteBorderIcon className="icon" /> leaderboard
+          <FavoriteBorderIcon className="icon" /> LeaderBoard
         </button>
         <button>
           {" "}
@@ -119,42 +120,39 @@ function Header() {
         >
           <Fade in={open}>
             <div className="header__paper">
-             
-                <Box className="header__AllPage">
-                  <Paper  >
-                    <Tabs
-                      className="header__AllPageTabs"
-                      value={value}
-                      
-                      textColor="white"
-                      onChange={handleChange}
 
-                    >
-                      <Tab label="Game Rule" />
-                      <Tab label="Current Bet" />
-                      <Tab label="Bet History" />
-                      <Tab label="Stock List" />
-                      <Tab label="setting" />
-                    </Tabs>
-                    <TabPanel value={value} index={0} className="header__AllPageTabPanel">
-                      <GameRule />
-                    </TabPanel>
-                    <TabPanel value={value} index={1} className="header__AllPageTabPanel">
+              <Box className="header__AllPage">
+                <Paper  >
+                  <Tabs
+                    className="header__AllPageTabs"
+                    value={value}
+                    onChange={handleChange}
+                  >
+                    <Tab label="Game Rule" />
+                    <Tab label="Current Bet" />
+                    <Tab label="Bet History" />
+                    <Tab label="Stock List" />
+                    <Tab label="setting" />
+                  </Tabs>
+                  <TabPanel value={value} index={0} className="header__AllPageTabPanel">
+                    <GameRule />
+                  </TabPanel>
+                  <TabPanel value={value} index={1} className="header__AllPageTabPanel">
                     <h2> Current Bet</h2>
-                    </TabPanel>
-                    <TabPanel value={value} index={2} className="header__AllPageTabPanel">
-                    <h2> Bet History</h2>
-                    </TabPanel>
-                    <TabPanel value={value} index={3} className="header__AllPageTabPanel">
-                          {/* Call Stock List Components */}
-                        <StockList />
-                    </TabPanel>
-                    <TabPanel value={value} index={4} className="header__AllPageTabPanel">
-                    <h2> Setting</h2> 
-                    </TabPanel>
-                  </Paper>
-                </Box>
-              
+                  </TabPanel>
+                  <TabPanel value={value} index={2} className="header__AllPageTabPanel">
+                    <BetHistory />
+                  </TabPanel>
+                  <TabPanel value={value} index={3} className="header__AllPageTabPanel">
+                    {/* Call Stock List Components */}
+                    <StockList />
+                  </TabPanel>
+                  <TabPanel value={value} index={4} className="header__AllPageTabPanel">
+                    <h2> Setting</h2>
+                  </TabPanel>
+                </Paper>
+              </Box>
+
 
             </div>
           </Fade>
