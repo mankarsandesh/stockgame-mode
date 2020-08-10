@@ -20,6 +20,7 @@ import Tabs from '@material-ui/core/Tabs';
 import StockList from "components/pages/StockList/StockList";
 import GameRule from "components/pages/GameRule/GameRule";
 import BetHistory from "components/pages/BetHistory/BetHistory";
+import CurrentBet from "components/pages/CurrentBet/CurrentBet";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -63,9 +64,6 @@ function Header() {
   const handleClose = () => {
     setOpen(false);
   };
-
-
-
 
 
   return (
@@ -124,10 +122,12 @@ function Header() {
                     <GameRule />
                   </TabPanel>
                   <TabPanel value={value} index={1} className="header__AllPageTabPanel">
-                    <h2> Current Bet</h2>
+                    {/* Users Current Bet History  */}
+                    <CurrentBet />
                   </TabPanel>
                   <TabPanel value={value} index={2} className="header__AllPageTabPanel">
-                    <BetHistory />
+                    {/* Users Bet History  */}
+                    <BetHistory   />
                   </TabPanel>
                   <TabPanel value={value} index={3} className="header__AllPageTabPanel">
                     {/* Call Stock List Components */}

@@ -2,12 +2,41 @@
   background-color: #191818;
   color: #fff !important;
 }
-.betHistory_dataHeader {
-  text-align: center;
-}
+
 .betHistory_data .betHistory__TableCell {
   background-color: #191818;
   color: #fff;
   text-align: center;
   padding: 5px;
+}
+.betHistory__TableCell Button{
+  background-color:#e3b846;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.betHistory__table{
+  border-collapse: collapse;
+  border:1px solid #FFFF;
+}
+table, th, td {
+  border: 1px solid #FFFF;
+}
+.betHistory__bottomTableRow{
+  font-size: 14px;
+}
+.betHistory__bottomTableRow .betHistory__TableCell{
+  background-color: #191818;
+  font-size: 14px;
+  border-collapse: collapse;
+  border:1px solid #FFF;
+  color: #FFF;
+  text-align: center;
+  font-weight: 800;
+}
+.betHistory__pagination{
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }

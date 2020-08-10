@@ -8,7 +8,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableFooter from '@material-ui/core/TableFooter';
-import TablePagination from '@material-ui/core/TablePagination';
+// import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
@@ -17,19 +17,16 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import TableHead from '@material-ui/core/TableHead';
+import { Button, Collapse } from '@material-ui/core';
 
-
-import { Button } from '@material-ui/core';
+import Pagination from '@material-ui/lab/Pagination';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: '#191818',
+    backgroundColor: '#292828',
     color: theme.palette.common.white,
     textTransform: 'uppercase'
-  },
-  body: {
-    fontSize: 14,
-  },
+  }
 }))(TableCell);
 
 
@@ -98,28 +95,23 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
 };
 
-function createData(name, calories, fat) {
-  return { name, calories, fat, name, calories, fat, name };
+function createData(betID, gameId, betDetails, time, amount, payout, status) {
+  return { betID, gameId, betDetails, time, amount, payout, status };
 }
 
 const rows = [
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7),
-  createData('Cupcake', 305, 3.7, 'Cupcake', 305, 3.7)
+  createData('JBDJSBHJD', "242454545454", "Both Digit - Odd (1.94) BTC", '8:50 PM', "$200", "2.9", "Pending"),
+  createData('JBDJSBHJD', "242454545454", "Both Digit - Odd (1.94) BTC", '8:50 PM', "$200", "2.9", "Pending"),
+  createData('JBDJSBHJD', "242454545454", "Both Digit - Odd (1.94) BTC", '8:50 PM', "$200", "2.9", "Pending"),
+  createData('JBDJSBHJD', "242454545454", "Both Digit - Odd (1.94) BTC", '8:50 PM', "$200", "2.9", "Pending"),
+  createData('JBDJSBHJD', "242454545454", "Both Digit - Odd (1.94) BTC", '8:50 PM', "$200", "2.9", "Pending"),
+  createData('JBDJSBHJD', "242454545454", "Both Digit - Odd (1.94) BTC", '8:50 PM', "$200", "2.9", "Pending")
 ].sort((a, b) => (a.calories < b.calories ? -1 : 1));
 
 const useStyles2 = makeStyles({
   table: {
-    minWidth: 500,
-    border: '1px solid #FFF'
+    borderCollapse: 'collapse',
+    border: '1px solid #FFF',
   },
 });
 
@@ -140,13 +132,13 @@ export default function CustomPaginationActionsTable() {
   };
 
   return (
-    <div>
-      <h2>Bet History</h2>
+    <div className="header__AllPageTabPanel">
+      <h2> Bet History</h2>
       <TableContainer component={Paper}>
 
-        <Table className={classes.table} aria-label="custom pagination table">
+        <Table className="betHistory__table" aria-label="custom pagination table" >
           <TableHead className="betHistory_dataHeader">
-            <TableRow>
+            <TableRow className="TableRow">
               <StyledTableCell>BET ID </StyledTableCell>
               <StyledTableCell align="right">GAME ID</StyledTableCell>
               <StyledTableCell align="right">Bet Details</StyledTableCell>
@@ -163,25 +155,25 @@ export default function CustomPaginationActionsTable() {
             ).map((row) => (
               <TableRow key={row.name}>
                 <TableCell className="betHistory__TableCell">
-                  {row.name}
+                  {row.betID}
                 </TableCell>
                 <TableCell className="betHistory__TableCell">
-                  {row.calories}
+                  {row.gameId}
                 </TableCell>
                 <TableCell className="betHistory__TableCell">
-                  {row.fat}
+                  {row.betDetails}
                 </TableCell>
                 <TableCell className="betHistory__TableCell">
-                  {row.name}
+                  {row.time}
                 </TableCell>
                 <TableCell className="betHistory__TableCell">
-                  {row.calories}
+                  {row.amount}
                 </TableCell>
                 <TableCell className="betHistory__TableCell">
-                  {row.fat}
+                  {row.payout}
                 </TableCell>
                 <TableCell className="betHistory__TableCell">
-                  <Button>Pending</Button>
+                  <Button className="betHistory_pending"> {row.status}</Button>
                 </TableCell>
 
               </TableRow>
@@ -193,9 +185,15 @@ export default function CustomPaginationActionsTable() {
               </TableRow>
             )}
           </TableBody>
-          {/* <TableFooter>
-          <TableRow>
-            <TablePagination
+          <TableFooter>
+            <TableRow className="betHistory__bottomTableRow">
+              <TableCell colSpan={1} className="betHistory__TableCell"> Total</TableCell>
+              <TableCell colSpan={3} className="betHistory__TableCell" > 5 Bets </TableCell>
+              <TableCell colSpan={1} className="betHistory__TableCell" > $1500</TableCell>
+              <TableCell colSpan={1} className="betHistory__TableCell" > $1500</TableCell>
+              <TableCell colSpan={1} className="betHistory__TableCell" ></TableCell>
+
+              {/* <TablePagination
               rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
               colSpan={7}
               count={rows.length}
@@ -208,10 +206,12 @@ export default function CustomPaginationActionsTable() {
               onChangePage={handleChangePage}
               onChangeRowsPerPage={handleChangeRowsPerPage}
               ActionsComponent={TablePaginationActions}
-            />
-          </TableRow>
-        </TableFooter> */}
+            /> */}
+            </TableRow>
+          </TableFooter>
+
         </Table>
+        <Pagination count={10} variant="outlined" shape="rounded" color="secondary" className="betHistory__pagination"/>
       </TableContainer>
     </div>
   );
