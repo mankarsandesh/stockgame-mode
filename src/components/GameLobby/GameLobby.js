@@ -4,11 +4,11 @@ import MoneyIcon from '@material-ui/icons/Money';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
-import one from "../../shared/images/chip/one.png";
-import two from "../../shared/images/chip/two.png";
-import three from "../../shared/images/chip/three.png";
-import four from "../../shared/images/chip/four.png";
-import five from "../../shared/images/chip/five.png";
+import one from "shared/images/chip/one.png";
+import two from "shared/images/chip/two.png";
+import three from "shared/images/chip/three.png";
+import four from "shared/images/chip/four.png";
+import five from "shared/images/chip/five.png";
 
 
 

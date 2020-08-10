@@ -5,35 +5,21 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import MoneyIcon from "@material-ui/icons/Money";
 import ShowChartIcon from "@material-ui/icons/ShowChart";
 import TrendingDownIcon from "@material-ui/icons/TrendingDown";
-
-import VideoCallIcon from "@material-ui/icons/VideoCall";
-import AppsIcon from "@material-ui/icons/Apps";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import Avatar from "@material-ui/core/Avatar";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-
-
+import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Popover from '@material-ui/core/Popover';
-import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
-
-
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
-import PropTypes from 'prop-types';
 
-
-import StockList from "../pages/StockList/StockList";
-import GameRule from "../pages/GameRule/GameRule";
-import BetHistory from "../pages/BetHistory/BetHistory";
+import StockList from "components/pages/StockList/StockList";
+import GameRule from "components/pages/GameRule/GameRule";
+import BetHistory from "components/pages/BetHistory/BetHistory";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

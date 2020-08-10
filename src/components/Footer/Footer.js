@@ -1,16 +1,15 @@
 import React, { Component } from "react";
+import "./Footer.css";
+
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import FullscreenIcon from "@material-ui/icons/Fullscreen";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
-
 import Button from "@material-ui/core/Button";
 
-import "./Footer.css";
-
-import Invitation from "../Invitation/Invitation";
+import Invitation from "components/Invitation/Invitation";
 
 class Footer extends Component {
   constructor() {

@@ -1,5 +1,6 @@
 import React from 'react'
 import "./StockList.css";
+
 function StockList() {
     return (
         <div className="header__AllPageTabPanel">

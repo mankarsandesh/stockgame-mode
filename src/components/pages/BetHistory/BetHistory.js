@@ -1,4 +1,6 @@
 import React from 'react';
+import "./BetHistory.css";
+
 import PropTypes from 'prop-types';
 import { withStyles, makeStyles, useTheme } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -16,7 +18,7 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import TableHead from '@material-ui/core/TableHead';
 
-import "./BetHistory.css";
+
 import { Button } from '@material-ui/core';
 
 const StyledTableCell = withStyles((theme) => ({

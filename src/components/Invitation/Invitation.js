@@ -1,28 +1,22 @@
-import React from 'react'
-
+import React from 'react';
+import "./Invitation.css";
 
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
-
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Popover from '@material-ui/core/Popover';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
-
-
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import PropTypes from 'prop-types';
-
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import ListItemText from '@material-ui/core/ListItemText';
-
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
-import "./Invitation.css";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;   

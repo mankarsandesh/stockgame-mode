@@ -1,6 +1,7 @@
 import React from 'react'
 import "./RoadMap.css";
-import TableTrendMap from "../TrandMap/TableTrendMap";
+import TableTrendMap from "components/TrandMap/TableTrendMap";
+
 function RoadMap() {
     return (
         <div className="roadMap__wrapper">
