@@ -73,6 +73,7 @@
 .header__AllPageTabs {
   background-color: #191818 !important;
   color: #e3b846;
+  border-bottom:1px solid #FFF;
   font-weight: 800 !important;
   text-transform: uppercase;
   text-align: center !important;
@@ -150,4 +151,15 @@
 .header__AllPageTabPanel{
   padding:0px 15px 15px 15px;
   background-color:#191818 !important;
+}
+.desktopModel__Close{
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border:2px solid #FFF;
+  text-align: center;
+  padding:4px;
+  font-weight: 800;
+  align-items: center;
+  right: 100px;
 }

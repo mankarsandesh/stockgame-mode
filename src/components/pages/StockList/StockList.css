@@ -5,6 +5,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-top: 20px;
+    border:1px solid #FFF !important;
   }
   .header__PageStockList table tr:first-child {
     background-color:#292828 !important;
@@ -13,4 +14,12 @@
   .header__PageStockList table tr td {
     padding:15px 40px;
     text-align: left;
+    border:1px solid #FFF;
+  }
+  .stockPage_data .betHistory__TableCell{
+    background-color: #191818;
+    font-size: 14px;
+    border-collapse: collapse;
+    border:1px solid #FFF;
+    color: #FFF;
   }

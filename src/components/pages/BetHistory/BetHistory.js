@@ -136,16 +136,16 @@ export default function CustomPaginationActionsTable() {
       <h2> Bet History</h2>
       <TableContainer component={Paper}>
 
-        <Table className="betHistory__table" aria-label="custom pagination table" >
+        <Table className="betHistory__table" aria-label="custom pagination table" rounded>
           <TableHead className="betHistory_dataHeader">
             <TableRow className="TableRow">
               <StyledTableCell>BET ID </StyledTableCell>
-              <StyledTableCell align="right">GAME ID</StyledTableCell>
-              <StyledTableCell align="right">Bet Details</StyledTableCell>
-              <StyledTableCell align="right">Time</StyledTableCell>
-              <StyledTableCell align="right">Amount</StyledTableCell>
-              <StyledTableCell align="right">Payout</StyledTableCell>
-              <StyledTableCell align="right">Bet Status</StyledTableCell>
+              <StyledTableCell align="center">GAME ID</StyledTableCell>
+              <StyledTableCell align="center">Bet Details</StyledTableCell>
+              <StyledTableCell align="center">Time</StyledTableCell>
+              <StyledTableCell align="center">Amount</StyledTableCell>
+              <StyledTableCell align="center">Payout</StyledTableCell>
+              <StyledTableCell align="center">Bet Status</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody className="betHistory_data">

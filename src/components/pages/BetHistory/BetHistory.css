@@ -18,6 +18,7 @@
 .betHistory__table{
   border-collapse: collapse;
   border:1px solid #FFFF;
+  border-radius: 4px;
 }
 table, th, td {
   border: 1px solid #FFFF;

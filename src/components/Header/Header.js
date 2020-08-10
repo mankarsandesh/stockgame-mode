@@ -16,6 +16,8 @@ import Box from '@material-ui/core/Box';
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
+import CloseIcon from '@material-ui/icons/Close';
+
 
 import StockList from "components/pages/StockList/StockList";
 import GameRule from "components/pages/GameRule/GameRule";
@@ -91,6 +93,7 @@ function Header() {
         </button>
 
         <Modal
+          borderRadius={16}
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
           className="header__model"
@@ -105,18 +108,22 @@ function Header() {
           <Fade in={open}>
             <div className="header__paper">
 
-              <Box className="header__AllPage">
-                <Paper  >
+              <Box className="header__AllPage"  >
+                <Paper  borderRadius={16} >
                   <Tabs
                     className="header__AllPageTabs"
+                    indicatorColor="black"
                     value={value}
                     onChange={handleChange}
+                    centered
+                    borderRadius={16}
                   >
                     <Tab label="Game Rule" />
                     <Tab label="Current Bet" />
                     <Tab label="Bet History" />
                     <Tab label="Stock List" />
                     <Tab label="setting" />
+                    
                   </Tabs>
                   <TabPanel value={value} index={0} className="header__AllPageTabPanel">
                     <GameRule />
@@ -127,7 +134,7 @@ function Header() {
                   </TabPanel>
                   <TabPanel value={value} index={2} className="header__AllPageTabPanel">
                     {/* Users Bet History  */}
-                    <BetHistory   />
+                    <BetHistory />
                   </TabPanel>
                   <TabPanel value={value} index={3} className="header__AllPageTabPanel">
                     {/* Call Stock List Components */}
@@ -141,7 +148,10 @@ function Header() {
 
 
             </div>
+
           </Fade>
+
+
         </Modal>
 
 
