@@ -11,12 +11,12 @@ function createTable() {
             children.push(<td className={`${ j > 5 ? 'bigDigit' : 'firstDigit'}`} key={j}  >B</td>)
         }
         //Create the parent and add the children
-        table.push(<tr className="section"  key={i} >{children}</tr>)
+        table.push(<tbody><tr className="section"  key={children} >{children}</tr></tbody>)
     }
     return table
 }
 
-function tableTrendMap() {
+function TableTrendMap() {
     return (
         <div className="tableTrend__wrapper">
             <div className="tableTrend__firstDigit">
@@ -28,4 +28,4 @@ function tableTrendMap() {
     )
 }
 
-export default tableTrendMap
+export default TableTrendMap

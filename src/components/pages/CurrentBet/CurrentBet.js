@@ -181,7 +181,7 @@ export default function CurrentBet() {
         <Table
           className="betHistory__table"
           aria-label="custom pagination table"
-          rounded
+          rounded="true"
         >
           <TableHead className="betHistory_dataHeader">
             <TableRow className="TableRow">

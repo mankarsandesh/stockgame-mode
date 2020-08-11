@@ -25,6 +25,8 @@ import CurrentBet from "components/pages/CurrentBet/CurrentBet";
 import Settings from "components/pages/Settings/Settings";
 import { Button } from "@material-ui/core";
 import Fab from "@material-ui/core/Fab";
+
+import ModelView from "components/Model/Model";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -47,19 +49,19 @@ TabPanel.propTypes = {
 };
 
 export default function Header() {
+  const [showComponent, setShowComponent] =  React.useState(false);;
   const [value, setValue] = React.useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+ 
   const [open, setOpen] = React.useState(false);
 
   // Close Open Model
   const handleClose = () => {
     setOpen(false);
   };
+
   // Open Model Page
-  function openModel(value) {
+  function openModel(value) {  
+    setShowComponent(true);
     setOpen(true);
     setValue(value);
   }
@@ -73,99 +75,18 @@ export default function Header() {
           src="http://ecglao.com/logo/logo.png"
         />
         <button onClick={() => openModel(0)}>
-          {" "}
           <DescriptionIcon className="icon" /> Rule
         </button>
         <button>
-          {" "}
           <FavoriteBorderIcon className="icon" /> LeaderBoard
         </button>
         <button onClick={() => openModel(1)}>
           <MoneyIcon className="icon" /> Current bet
         </button>
-        <button onClick={() => openModel(3)}>
-          {" "}
+        <button onClick={() => openModel(3)}  >
           <ShowChartIcon className="icon" /> Stock List
+           <ModelView openTabValue={value} />
         </button>
-
-        <Modal
-          borderRadius={16}
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          className="header__model"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={open}>
-            <div className="header__paper">
-              <button onClick={handleClose} className="desktopModel__Close">
-                <CloseIcon />
-              </button>
-              <Box className="header__AllPage">
-                <Paper borderRadius={16}>
-                  <Tabs
-                    className="header__AllPageTabs"
-                    indicatorColor="black"
-                    value={value}
-                    onChange={handleChange}
-                    centered
-                    borderRadius={16}
-                  >
-                    <Tab label="Game Rule" />
-                    <Tab label="Current Bet" />
-                    <Tab label="Bet History" />
-                    <Tab label="Stock List" />
-                    <Tab label="setting" />
-                  </Tabs>
-                  <TabPanel
-                    value={value}
-                    index={0}
-                    className="header__AllPageTabPanel"
-                  >
-                    {/* Game Rule Page */}
-                    <GameRule />
-                  </TabPanel>
-                  <TabPanel
-                    value={value}
-                    index={1}
-                    className="header__AllPageTabPanel"
-                  >
-                    {/* Users Current Bet History  */}
-                    <CurrentBet />
-                  </TabPanel>
-                  <TabPanel
-                    value={value}
-                    index={2}
-                    className="header__AllPageTabPanel"
-                  >
-                    {/* Users Bet History  */}
-                    <BetHistory />
-                  </TabPanel>
-                  <TabPanel
-                    value={value}
-                    index={3}
-                    className="header__AllPageTabPanel"
-                  >
-                    {/* Call Stock List Components */}
-                    <StockList />
-                  </TabPanel>
-                  <TabPanel
-                    value={value}
-                    index={4}
-                    className="header__AllPageTabPanel"
-                  >
-                    <Settings />
-                  </TabPanel>
-                </Paper>
-              </Box>
-            </div>
-          </Fade>
-        </Modal>
       </div>
       <div className="header__leftCurve"></div>
       <div className="header__stock">

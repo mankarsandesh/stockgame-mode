@@ -1,7 +1,7 @@
 import React from 'react'
 import "./RoadMap.css";
 import TableTrendMap from "components/TrandMap/TableTrendMap";
-
+const numbers = [1,2,3];
 function RoadMap() {
     return (
         <div className="roadMap__wrapper">
@@ -13,10 +13,13 @@ function RoadMap() {
                 <button className="twoDigit" >TWO Digit </button>
             </div>
             <div className="roadMap__data">
-                <TableTrendMap />
-                <TableTrendMap />
-                <TableTrendMap />
-                <TableTrendMap />
+               
+                {numbers.map((number) => 
+                     <TableTrendMap  key={number} />
+                )}
+               
+               
+               
             </div>
 
         </div>
