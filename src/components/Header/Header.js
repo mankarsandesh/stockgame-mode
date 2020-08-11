@@ -11,19 +11,20 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import PropTypes from 'prop-types';
-import Box from '@material-ui/core/Box';
-import Tab from '@material-ui/core/Tab';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-
+import PropTypes from "prop-types";
+import Box from "@material-ui/core/Box";
+import Tab from "@material-ui/core/Tab";
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import CloseIcon from "@material-ui/icons/Close";
 
 import StockList from "components/pages/StockList/StockList";
 import GameRule from "components/pages/GameRule/GameRule";
 import BetHistory from "components/pages/BetHistory/BetHistory";
 import CurrentBet from "components/pages/CurrentBet/CurrentBet";
 import Settings from "components/pages/Settings/Settings";
-
+import { Button } from "@material-ui/core";
+import Fab from "@material-ui/core/Fab";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -34,11 +35,7 @@ function TabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box p={1}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box p={1}>{children}</Box>}
     </div>
   );
 }
@@ -49,10 +46,7 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-
-export default function Header(){
-
-
+export default function Header() {
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -64,8 +58,8 @@ export default function Header(){
   const handleClose = () => {
     setOpen(false);
   };
-  // Open Model Page 
-  function openModel(value){  
+  // Open Model Page
+  function openModel(value) {
     setOpen(true);
     setValue(value);
   }
@@ -73,8 +67,12 @@ export default function Header(){
   return (
     <div className="header">
       <div className="header__left">
-        <img className="header__logo" alt="EC Game" src="http://ecglao.com/logo/logo.png" />
-        <button  onClick={() => openModel(0)}>
+        <img
+          className="header__logo"
+          alt="EC Game"
+          src="http://ecglao.com/logo/logo.png"
+        />
+        <button onClick={() => openModel(0)}>
           {" "}
           <DescriptionIcon className="icon" /> Rule
         </button>
@@ -105,8 +103,11 @@ export default function Header(){
         >
           <Fade in={open}>
             <div className="header__paper">
-              <Box className="header__AllPage"  >
-                <Paper  borderRadius={16} >
+              <button onClick={handleClose} className="desktopModel__Close">
+                <CloseIcon />
+              </button>
+              <Box className="header__AllPage">
+                <Paper borderRadius={16}>
                   <Tabs
                     className="header__AllPageTabs"
                     indicatorColor="black"
@@ -120,39 +121,51 @@ export default function Header(){
                     <Tab label="Bet History" />
                     <Tab label="Stock List" />
                     <Tab label="setting" />
-                    
                   </Tabs>
-                  <TabPanel value={value} index={0} className="header__AllPageTabPanel">
+                  <TabPanel
+                    value={value}
+                    index={0}
+                    className="header__AllPageTabPanel"
+                  >
+                    {/* Game Rule Page */}
                     <GameRule />
                   </TabPanel>
-                  <TabPanel value={value} index={1} className="header__AllPageTabPanel">
+                  <TabPanel
+                    value={value}
+                    index={1}
+                    className="header__AllPageTabPanel"
+                  >
                     {/* Users Current Bet History  */}
                     <CurrentBet />
                   </TabPanel>
-                  <TabPanel value={value} index={2} className="header__AllPageTabPanel">
+                  <TabPanel
+                    value={value}
+                    index={2}
+                    className="header__AllPageTabPanel"
+                  >
                     {/* Users Bet History  */}
                     <BetHistory />
                   </TabPanel>
-                  <TabPanel value={value} index={3} className="header__AllPageTabPanel">
+                  <TabPanel
+                    value={value}
+                    index={3}
+                    className="header__AllPageTabPanel"
+                  >
                     {/* Call Stock List Components */}
                     <StockList />
                   </TabPanel>
-                  <TabPanel value={value} index={4} className="header__AllPageTabPanel">
+                  <TabPanel
+                    value={value}
+                    index={4}
+                    className="header__AllPageTabPanel"
+                  >
                     <Settings />
                   </TabPanel>
                 </Paper>
               </Box>
-
-
             </div>
-
           </Fade>
-
-
         </Modal>
-
-
-
       </div>
       <div className="header__leftCurve"></div>
       <div className="header__stock">
@@ -180,4 +193,3 @@ export default function Header(){
     </div>
   );
 }
-
