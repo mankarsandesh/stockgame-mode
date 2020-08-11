@@ -1,13 +1,14 @@
-import React from 'react'
-import "./Settings.css";
+import React, { Component } from 'react'
+import './Settings.css';
 
-
-function Settings() {
-    return (
-        <div>
-            
-        </div>
-    )
+export class Settings extends Component {
+    render() {
+        return (
+            <div>
+                <h2>Game Settings</h2>
+            </div>
+        )
+    }
 }
 
 export default Settings

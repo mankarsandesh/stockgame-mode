@@ -23,6 +23,7 @@ import StockList from "components/pages/StockList/StockList";
 import GameRule from "components/pages/GameRule/GameRule";
 import BetHistory from "components/pages/BetHistory/BetHistory";
 import CurrentBet from "components/pages/CurrentBet/CurrentBet";
+import Settings from "components/pages/Settings/Settings";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -49,7 +50,8 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function Header() {
+
+export default function Header(){
   const [inputSearch, setInputSearch] = useState("");
 
   const [value, setValue] = React.useState(0);
@@ -66,16 +68,17 @@ function Header() {
   const handleClose = () => {
     setOpen(false);
   };
-
+  // Open Model Page 
+  function openModel(value){  
+    setOpen(true);
+    setValue(value);
+  }
 
   return (
     <div className="header">
-
-
-
       <div className="header__left">
         <img className="header__logo" src="http://ecglao.com/logo/logo.png" />
-        <button>
+        <button  onClick={() => openModel(0)}>
           {" "}
           <DescriptionIcon className="icon" /> Rule
         </button>
@@ -83,11 +86,10 @@ function Header() {
           {" "}
           <FavoriteBorderIcon className="icon" /> LeaderBoard
         </button>
-        <button>
-          {" "}
+        <button onClick={() => openModel(1)}>
           <MoneyIcon className="icon" /> Current bet
         </button>
-        <button onClick={handleOpen}>
+        <button onClick={() => openModel(3)}>
           {" "}
           <ShowChartIcon className="icon" /> Stock List
         </button>
@@ -107,7 +109,6 @@ function Header() {
         >
           <Fade in={open}>
             <div className="header__paper">
-
               <Box className="header__AllPage"  >
                 <Paper  borderRadius={16} >
                   <Tabs
@@ -141,7 +142,7 @@ function Header() {
                     <StockList />
                   </TabPanel>
                   <TabPanel value={value} index={4} className="header__AllPageTabPanel">
-                    <h2> Setting</h2>
+                    <Settings />
                   </TabPanel>
                 </Paper>
               </Box>
@@ -183,4 +184,4 @@ function Header() {
     </div>
   );
 }
-export default Header;
+
