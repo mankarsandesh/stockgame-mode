@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import DescriptionIcon from "@material-ui/icons/Description";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
@@ -16,7 +16,6 @@ import Box from '@material-ui/core/Box';
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
-import CloseIcon from '@material-ui/icons/Close';
 
 
 import StockList from "components/pages/StockList/StockList";
@@ -52,7 +51,7 @@ TabPanel.propTypes = {
 
 
 export default function Header(){
-  const [inputSearch, setInputSearch] = useState("");
+
 
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
@@ -61,10 +60,7 @@ export default function Header(){
 
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
+  // Close Open Model
   const handleClose = () => {
     setOpen(false);
   };
@@ -77,7 +73,7 @@ export default function Header(){
   return (
     <div className="header">
       <div className="header__left">
-        <img className="header__logo" src="http://ecglao.com/logo/logo.png" />
+        <img className="header__logo" alt="EC Game" src="http://ecglao.com/logo/logo.png" />
         <button  onClick={() => openModel(0)}>
           {" "}
           <DescriptionIcon className="icon" /> Rule
