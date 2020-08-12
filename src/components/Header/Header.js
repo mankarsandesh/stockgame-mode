@@ -78,7 +78,7 @@ export default function Header() {
         <h2>
           USINDEX: <span> $9,03245 </span>
         </h2>
-        <button>
+        <button onClick={() => handleOpen(3,'menuChart')}>
           <TrendingDownIcon className="icon" /> Full Featured Chart
         </button>
       </div>
