@@ -14,8 +14,6 @@ import PropTypes from "prop-types";
 import Box from "@material-ui/core/Box";
 import CloseIcon from "@material-ui/icons/Close";
 
-
-
 import ModelView from "components/Model/Model";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,17 +38,18 @@ TabPanel.propTypes = {
 
 export default function Header() {
   const [value, setValue] = React.useState(0);
-
+  const [pageName, setPageName] = React.useState("menuPage");
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = (value) => {
+  const handleOpen = (value,pageName) => {
     setOpen(true);
     setValue(value);
+    setPageName(pageName);
+    console.log(pageName,'pageName');
   };
 
   const handleClose = () => {
     setOpen(false);
-    console.log("Close");
   };
 
   return (
@@ -61,38 +60,18 @@ export default function Header() {
           alt="EC Game"
           src="http://ecglao.com/logo/logo.png"
         />
-        <button onClick={() => handleOpen(0)}>
+        <button onClick={() => handleOpen(0,'menuPage')}>
           <DescriptionIcon className="icon" /> Rule
         </button>
-        <button>
+        <button onClick={() => handleOpen(1,'menuLeaderboard')}>
           <FavoriteBorderIcon className="icon" /> LeaderBoard
         </button>
-        <button onClick={() => handleOpen(1)}>
+        <button onClick={() => handleOpen(1,'menuPage')}>
           <MoneyIcon className="icon" /> Current bet
         </button>
-        <button onClick={() => handleOpen(3)}>
+        <button onClick={() => handleOpen(3,'menuPage')}>
           <ShowChartIcon className="icon" /> Stock List
         </button>
-
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          className="header__model"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <div className="header__paper">
-            <button onClick={handleClose} className="desktopModel__Close">
-              <CloseIcon />
-            </button>
-            <ModelView openTabValue={value} />
-          </div>
-        </Modal>
       </div>
       <div className="header__leftCurve"></div>
       <div className="header__stock">
@@ -117,6 +96,26 @@ export default function Header() {
         </div>
         <ExpandMoreIcon className="icon" />
       </div>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className="header__model"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <div className="header__paper">
+          <button onClick={handleClose} className="desktopModel__Close">
+            <CloseIcon />
+          </button>
+          <ModelView openTabValue={value} pageName={pageName} />
+        </div>
+      </Modal>
     </div>
   );
 }

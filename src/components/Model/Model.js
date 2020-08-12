@@ -17,7 +17,7 @@ import CurrentBet from "components/pages/CurrentBet/CurrentBet";
 import StockList from "components/pages/StockList/StockList";
 import Settings from "components/pages/Settings/Settings";
 import BetHistory from "components/pages/BetHistory/BetHistory";
-
+import Leaderboard from "components/pages/Leaderboard/Leaderboard";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -42,7 +42,8 @@ TabPanel.propTypes = {
 class ModelView extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: props.openTabValue, open: true };
+    this.state = { value: props.openTabValue, open: true , pageName : props.pageName };
+    console.log(props.pageName,"Page Name");
   }
 
   handleChange = (event, newValue) => {
@@ -53,7 +54,15 @@ class ModelView extends React.Component {
 
   render() {
     return (
+
       <Box className="header__AllPage">
+        { 
+        this.state.pageName == "menuLeaderboard"  ? 
+        <Paper>
+       
+          <Leaderboard/>
+          </Paper>
+        :
         <Paper>
           <Tabs
             className="header__AllPageTabs"
@@ -107,6 +116,7 @@ class ModelView extends React.Component {
             <Settings />
           </TabPanel>
         </Paper>
+  }
       </Box>
     );
   }
