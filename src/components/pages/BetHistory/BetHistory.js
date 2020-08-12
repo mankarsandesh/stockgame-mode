@@ -112,7 +112,7 @@ function createData(betID, gameId, betDetails, time, amount, payout, status) {
 
 const rows = [
   createData(
-    "JBDJSBHJD",
+    "JBDJSBHJD1",
     "242454545454",
     "Both Digit - Odd (1.94) BTC",
     "8:50 PM",
@@ -121,7 +121,7 @@ const rows = [
     "Pending"
   ),
   createData(
-    "JBDJSBHJD",
+    "JBDJSBHJD2",
     "242454545454",
     "Both Digit - Odd (1.94) BTC",
     "8:50 PM",
@@ -130,7 +130,7 @@ const rows = [
     "Pending"
   ),
   createData(
-    "JBDJSBHJD",
+    "JBDJSBHJD4",
     "242454545454",
     "Both Digit - Odd (1.94) BTC",
     "8:50 PM",
@@ -139,7 +139,7 @@ const rows = [
     "Pending"
   ),
   createData(
-    "JBDJSBHJD",
+    "JBDJSBHJD6",
     "242454545454",
     "Both Digit - Odd (1.94) BTC",
     "8:50 PM",
@@ -148,7 +148,7 @@ const rows = [
     "Pending"
   ),
   createData(
-    "JBDJSBHJD",
+    "JBDJSBHJD7",
     "242454545454",
     "Both Digit - Odd (1.94) BTC",
     "8:50 PM",
@@ -157,7 +157,7 @@ const rows = [
     "Pending"
   ),
   createData(
-    "JBDJSBHJD",
+    "JBDJSBHJD8",
     "242454545454",
     "Both Digit - Odd (1.94) BTC",
     "8:50 PM",
@@ -199,7 +199,7 @@ export default function CustomPaginationActionsTable() {
               ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : rows
             ).map((row) => (
-              <TableRow key={row.name}>
+              <TableRow key={row.betID}>
                 <TableCell className="betHistory__TableCell">
                   {row.betID}
                 </TableCell>

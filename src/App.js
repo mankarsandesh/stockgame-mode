@@ -1,27 +1,28 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import RoadMap from "./components/RoadMap/RoadMap";
-import GameLobby from "./components/GameLobby/GameLobby";
+import Home from "./components/Home/Home";
+import Test from './components/Test/Test';
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="AppMain__wrapper">
-        <div className="AppMain__roadMap">
-          <RoadMap />
-        </div>
-        <div className="AppMain__gamerLobby">
-            <GameLobby />
-        </div>
-         
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/test" component={Test}></Route>
+        </Switch>
+
+        <Footer />
       </div>
-      
-      <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
