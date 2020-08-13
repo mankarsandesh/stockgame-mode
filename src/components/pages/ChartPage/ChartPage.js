@@ -2,7 +2,7 @@ import React from "react";
 import { Select, MenuItem } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import { Bar } from "react-chartjs-2";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -87,12 +87,12 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#e3b846",
       textTransform: "uppercase",
       fontWeight: "800",
-    }
+    },
   })
 );
 function ChartPage() {
   const classes = useStyles();
-
+  
   return (
     <div className={classes.root}>
       <div className={classes.selectWrapper}>
@@ -102,8 +102,7 @@ function ChartPage() {
             <h2 className={classes.stockH2Name}>Select Stock</h2>
           </Grid>
           <Grid item xs={2}>
-            <Select             
-            
+            <Select
               className={classes.selectedInputCategory}
               disableUnderline
               value=" "
@@ -144,7 +143,7 @@ function ChartPage() {
         </Grid>
       </div>
       <div className="stock__chart">
-
+       
       </div>
     </div>
   );
