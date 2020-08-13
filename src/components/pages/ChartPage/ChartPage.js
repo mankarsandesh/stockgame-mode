@@ -2,6 +2,7 @@ import React from "react";
 import { Select, MenuItem } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,6 +16,8 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyItems: "center",
       textAlign: "center",
       width: "100%",
+      paddingBottom: "10px",
+      borderBottom: "1px solid #e3b846",
     },
     selectedInputCategory: {
       display: "flex",
@@ -25,12 +28,12 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: "30px",
       width: "150px",
       fontSize: "14px",
-      backgroundColor:'#982229',
-      textAlign:'center',
-      textTransform:'uppercase',
-      cursor:'pointer'
+      backgroundColor: "#982229",
+      textAlign: "center",
+      textTransform: "uppercase",
+      cursor: "pointer",
     },
-    selectedInputStock : {
+    selectedInputStock: {
       display: "flex",
       justifyItems: "center",
       listStyle: "center",
@@ -39,12 +42,12 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: "30px",
       width: "150px",
       fontSize: "14px",
-      backgroundColor:'#2c5927',
-      textAlign:'center',
-      textTransform:'uppercase',
-      cursor:'pointer'
+      backgroundColor: "#2c5927",
+      textAlign: "center",
+      textTransform: "uppercase",
+      cursor: "pointer",
     },
-    selectedInputLoop : {
+    selectedInputLoop: {
       display: "flex",
       justifyItems: "center",
       listStyle: "center",
@@ -53,10 +56,10 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: "30px",
       width: "150px",
       fontSize: "14px",
-      backgroundColor:'#364f97',
-      textAlign:'center',
-      textTransform:'uppercase',
-      cursor:'pointer'
+      backgroundColor: "#364f97",
+      textAlign: "center",
+      textTransform: "uppercase",
+      cursor: "pointer",
     },
     dropdownStyleCategory: {
       marginTop: "30px",
@@ -79,11 +82,11 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#364f97",
       color: "white",
     },
-    stockH2Name : {
-      fontSize:'16px',
-      color:'#e3b846',
-      textTransform:'uppercase',
-      fontWeight:'800'
+    stockH2Name: {
+      fontSize: "16px",
+      color: "#e3b846",
+      textTransform: "uppercase",
+      fontWeight: "800",
     }
   })
 );
@@ -99,7 +102,8 @@ function ChartPage() {
             <h2 className={classes.stockH2Name}>Select Stock</h2>
           </Grid>
           <Grid item xs={2}>
-            <Select
+            <Select             
+            
               className={classes.selectedInputCategory}
               disableUnderline
               value=" "
@@ -133,11 +137,14 @@ function ChartPage() {
             >
               <MenuItem value=" ">Stock Type</MenuItem>
               <MenuItem value={10}>1 Minute</MenuItem>
-              <MenuItem value={20}>5 Minute</MenuItem>             
+              <MenuItem value={20}>5 Minute</MenuItem>
             </Select>
           </Grid>
           <Grid item xs={2}></Grid>
         </Grid>
+      </div>
+      <div className="stock__chart">
+
       </div>
     </div>
   );
