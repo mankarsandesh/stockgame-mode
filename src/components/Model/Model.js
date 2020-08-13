@@ -42,7 +42,6 @@ class ModelView extends React.Component {
       open: true,
       pageName: props.pageName,
     };
-    console.log(props.pageName, "Page Name");
   }
 
   handleChange = (event, newValue) => {
@@ -61,6 +60,57 @@ class ModelView extends React.Component {
         ) : this.state.pageName == "menuChart" ? (
           <Paper>
             <ChartPage />
+          </Paper>
+        ) : this.state.pageName == "menuProfile" ? (
+          <Paper>
+            <Tabs
+              className="header__AllPageTabs"
+              value={this.state.value}
+              onChange={this.handleChange}
+              centered
+            >
+              <Tab label="Basic Information" />
+              <Tab label="Online History" />
+              <Tab label="Stock Analysis" />
+              <Tab label="my Followers" />
+              <Tab label="Following" />
+              <Tab label="Settings" />
+            </Tabs>
+            <TabPanel
+              value={this.state.value}
+              index={0}
+              className="header__AllPageTabPanel"
+            >
+             
+            </TabPanel>
+            <TabPanel
+              value={this.state.value}
+              index={1}
+              className="header__AllPageTabPanel"
+            >
+            
+            </TabPanel>
+            <TabPanel
+              value={this.state.value}
+              index={2}
+              className="header__AllPageTabPanel"
+            >
+             
+            </TabPanel>
+            <TabPanel
+              value={this.state.value}
+              index={3}
+              className="header__AllPageTabPanel"
+            >
+              
+            </TabPanel>
+            <TabPanel
+              value={this.state.value}
+              index={4}
+              className="header__AllPageTabPanel"
+            >
+             
+            </TabPanel>
           </Paper>
         ) : (
           <Paper>

@@ -15,6 +15,7 @@ import Box from "@material-ui/core/Box";
 import CloseIcon from "@material-ui/icons/Close";
 
 import ModelView from "components/Model/Model";
+import { Button } from "@material-ui/core";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -82,7 +83,8 @@ export default function Header() {
           <TrendingDownIcon className="icon" /> Full Featured Chart
         </button>
       </div>
-      <div className="header__icons">
+      <div className="header__icons" >
+        <Button onClick={() => handleOpen(0,'menuProfile')}>
         <Avatar
           alt="Sandesh Mankar"
           src="https://miro.medium.com/max/3150/2*fQO45CfgZstbBjeHxeSxHA.jpeg"
@@ -95,6 +97,8 @@ export default function Header() {
           <p>10,000.00</p>
         </div>
         <ExpandMoreIcon className="icon" />
+        </Button>
+      
       </div>
 
       <Modal
