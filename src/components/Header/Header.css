@@ -107,6 +107,10 @@
   padding: 0px 16px;
   text-transform: uppercase;
   font-weight: 600;
+  cursor: pointer;
+}
+.header__stock > button:focus{
+  outline: none;
 }
 .header__stock .icon {
   padding-left: 5px;
