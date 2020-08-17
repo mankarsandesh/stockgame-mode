@@ -13,6 +13,8 @@ import Settings from "components/pages/Settings/Settings";
 import BetHistory from "components/pages/BetHistory/BetHistory";
 import Leaderboard from "components/pages/Leaderboard/Leaderboard";
 import ChartPage from "components/pages/ChartPage/ChartPage";
+import BasicInfo from "components/pages/UserBasicInfo/UserBasicInfo";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -81,7 +83,7 @@ class ModelView extends React.Component {
               index={0}
               className="header__AllPageTabPanel"
             >
-             
+             <BasicInfo />
             </TabPanel>
             <TabPanel
               value={this.state.value}
