@@ -2,14 +2,13 @@ import React from "react";
 import { Select, MenuItem } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import { Bar } from "react-chartjs-2";
+import StockChart from "components/StockChart/StockChart";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       backgroundColor: "#191818",
       padding: "20px",
-      display: "flex",
     },
     selectWrapper: {
       display: "flex",
@@ -88,11 +87,29 @@ const useStyles = makeStyles((theme: Theme) =>
       textTransform: "uppercase",
       fontWeight: "800",
     },
+    stockChartWrapper: {
+      width: "100%",
+    },
+    stockNamePrice : {
+      margin:'20px',
+      display:'flex',
+    },
+    stockName : {
+      fontSize:'20px',
+      color:'#d8aa49',
+      flexGrow:'1',
+      margin:'0'
+    },
+    stockPrice : {
+      fontSize:'20px',
+      color:'#FFF',
+      margin:'0'
+    }
   })
 );
 function ChartPage() {
   const classes = useStyles();
-  
+
   return (
     <div className={classes.root}>
       <div className={classes.selectWrapper}>
@@ -142,7 +159,12 @@ function ChartPage() {
           <Grid item xs={2}></Grid>
         </Grid>
       </div>
-      <div className="stock__chart">
+      <div className={classes.stockChartWrapper}>
+       <div className={classes.stockNamePrice} >
+         <h2 className={classes.stockName}>USINDEX LIVE STOCK</h2>
+         <h2 className={classes.stockPrice} >$96.9820</h2>
+       </div>
+          <StockChart />
        
       </div>
     </div>
