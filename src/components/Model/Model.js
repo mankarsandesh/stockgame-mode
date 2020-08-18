@@ -18,6 +18,8 @@ import UserFollower from 'components/pages/UserFollower/UserFollower';
 import UserFollowing from 'components/pages/UserFollowing/UserFollowing';
 import UserProfile from 'components/pages/UserProfile/UserProfile';
 
+import OnlineHistory from 'components/pages/OnlineHistory/OnlineHistory';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -97,7 +99,7 @@ class ModelView extends React.Component {
               index={1}
               className="header__AllPageTabPanel"
             >
-            
+            <OnlineHistory />
             </TabPanel>
             <TabPanel
               value={this.state.value}

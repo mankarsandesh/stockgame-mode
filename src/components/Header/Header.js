@@ -84,7 +84,7 @@ export default function Header() {
         </button>
       </div>
       <div className="header__icons" >
-        <Button onClick={() => handleOpen(0,'UserProfile')}>
+        <Button onClick={() => handleOpen(0,'menuProfile')}>
         <Avatar
           alt="Sandesh Mankar"
           src="https://miro.medium.com/max/3150/2*fQO45CfgZstbBjeHxeSxHA.jpeg"
