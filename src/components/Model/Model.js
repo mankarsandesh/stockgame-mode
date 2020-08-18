@@ -16,6 +16,7 @@ import ChartPage from "components/pages/ChartPage/ChartPage";
 import BasicInfo from "components/pages/UserBasicInfo/UserBasicInfo";
 import UserFollower from 'components/pages/UserFollower/UserFollower';
 import UserFollowing from 'components/pages/UserFollowing/UserFollowing';
+import UserProfile from 'components/pages/UserProfile/UserProfile';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,6 +65,10 @@ class ModelView extends React.Component {
         ) : this.state.pageName == "menuChart" ? (
           <Paper>
             <ChartPage />
+          </Paper>
+        ) : this.state.pageName == "UserProfile" ? (
+          <Paper>
+            <UserProfile />
           </Paper>
         ) : this.state.pageName == "menuProfile" ? (
           <Paper>
@@ -114,6 +119,13 @@ class ModelView extends React.Component {
               className="header__AllPageTabPanel"
             >
               <UserFollowing />
+            </TabPanel>
+            <TabPanel
+              value={this.state.value}
+              index={5}
+              className="header__AllPageTabPanel"
+            >
+             
             </TabPanel>
           </Paper>
         ) : (
