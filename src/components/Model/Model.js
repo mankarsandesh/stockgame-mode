@@ -14,6 +14,8 @@ import BetHistory from "components/pages/BetHistory/BetHistory";
 import Leaderboard from "components/pages/Leaderboard/Leaderboard";
 import ChartPage from "components/pages/ChartPage/ChartPage";
 import BasicInfo from "components/pages/UserBasicInfo/UserBasicInfo";
+import UserFollower from 'components/pages/UserFollower/UserFollower';
+import UserFollowing from 'components/pages/UserFollowing/UserFollowing';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -97,21 +99,21 @@ class ModelView extends React.Component {
               index={2}
               className="header__AllPageTabPanel"
             >
-             
+         
             </TabPanel>
             <TabPanel
               value={this.state.value}
               index={3}
               className="header__AllPageTabPanel"
             >
-              
+                  <UserFollower />
             </TabPanel>
             <TabPanel
               value={this.state.value}
               index={4}
               className="header__AllPageTabPanel"
             >
-             
+              <UserFollowing />
             </TabPanel>
           </Paper>
         ) : (
