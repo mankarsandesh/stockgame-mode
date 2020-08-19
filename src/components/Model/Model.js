@@ -14,11 +14,11 @@ import BetHistory from "components/pages/BetHistory/BetHistory";
 import Leaderboard from "components/pages/Leaderboard/Leaderboard";
 import ChartPage from "components/pages/ChartPage/ChartPage";
 import BasicInfo from "components/pages/UserBasicInfo/UserBasicInfo";
-import UserFollower from 'components/pages/UserFollower/UserFollower';
-import UserFollowing from 'components/pages/UserFollowing/UserFollowing';
-import UserProfile from 'components/pages/UserProfile/UserProfile';
-
-import OnlineHistory from 'components/pages/OnlineHistory/OnlineHistory';
+import UserFollower from "components/pages/UserFollower/UserFollower";
+import UserFollowing from "components/pages/UserFollowing/UserFollowing";
+import UserProfile from "components/pages/UserProfile/UserProfile";
+import OnlineHistory from "components/pages/OnlineHistory/OnlineHistory";
+import StockAnalysis from "components/pages/StockAnalysis/StockAnalysis";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,28 +92,28 @@ class ModelView extends React.Component {
               index={0}
               className="header__AllPageTabPanel"
             >
-             <BasicInfo />
+              <BasicInfo />
             </TabPanel>
             <TabPanel
               value={this.state.value}
               index={1}
               className="header__AllPageTabPanel"
             >
-            <OnlineHistory />
+              <OnlineHistory />
             </TabPanel>
             <TabPanel
               value={this.state.value}
               index={2}
               className="header__AllPageTabPanel"
             >
-         
+              <StockAnalysis />
             </TabPanel>
             <TabPanel
               value={this.state.value}
               index={3}
               className="header__AllPageTabPanel"
             >
-                  <UserFollower />
+              <UserFollower />
             </TabPanel>
             <TabPanel
               value={this.state.value}
@@ -127,7 +127,7 @@ class ModelView extends React.Component {
               index={5}
               className="header__AllPageTabPanel"
             >
-             
+              <Settings />
             </TabPanel>
           </Paper>
         ) : (
