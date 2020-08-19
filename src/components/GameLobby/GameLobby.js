@@ -10,6 +10,7 @@ import three from "shared/images/chip/three.png";
 import four from "shared/images/chip/four.png";
 import five from "shared/images/chip/five.png";
 
+import Game from 'components/Game/Game';
 class GameLobby extends React.Component {
   render() {
     return (
@@ -69,7 +70,10 @@ class GameLobby extends React.Component {
             </div>
           </div>
           <div className="gameLobby__GameRule">
-            <div className="gameLobby__GameRuleCircle"></div>
+            <div className="gameLobby__GameRuleCircle">
+              <Game />
+              
+            </div>
           </div>
           <div className="gameLobby__StockRule">
             <button className="firstDigit">First Digit</button>
