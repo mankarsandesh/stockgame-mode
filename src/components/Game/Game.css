@@ -583,40 +583,109 @@ label {
 }
 .wheel {
   position: relative;
-  width: 20vw;
-  height: 20vw;
-  left: 6.25vw;
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
+  background: #fffb52;
+  border: 15px solid #ecb408;
+  -webkit-box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
+-moz-box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
+box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
 }
 .wheel span {
   display: block;
   position: absolute;
   border-radius: 50%;
 }
+
 .wheel span.centre {
-  top: 12.5%;
-  left: 12.5%;
-  width: 75%;
-  height: 75%;
+  top: 65px;
+  left: 65px;
+  width: 290px;
+  height: 290px;
   background: #fffb52;
+  padding: 0px;  
+  z-index: 999;
+  text-align: center;
+  -webkit-box-shadow: -1px 2px 20px 1px rgba(0,0,0,0.31);
+  -moz-box-shadow: -1px 2px 20px 1px rgba(0,0,0,0.31);
+  box-shadow: -1px 2px 20px 1px rgba(0,0,0,0.31);
 }
 
+.wheel span span {
+  width: 230px;
+  height: 230px;
+ 
+  background: #fffb52;
+  border: 30px solid #ecb408;
+  -webkit-box-shadow: inset 9px -42px 24px 50px rgba(255,255,100,0.52);
+  -moz-box-shadow: inset 9px -42px 24px 50px rgba(255,255,100,0.52);
+  box-shadow: inset 9px -42px 24px 50px rgba(255,255,100,0.52);
+
+  text-align: center;
+}
+.wheel .centre h4 {
+  font-size: 25px;
+  color: #a43b24;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 60px 0 0 0;
+}
+
+.wheel .centre h1 {
+  font-size: 65px;
+  color: #a43b24;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 800;
+  margin: 0;
+}
 .wheel div {
   position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 50%;
+  top: -15px;
+  left: 210px;
+  width: 0;
+  height: 0;
   transform-origin: 0 100%;
   cursor: pointer;
-  background-color: #333;
-  border: 1px solid red;
+  border-top: 220px solid #a43b24;
+  border-left: 0px solid transparent;
+  border-right: 160px solid transparent;
+  /* background: #fffb52; */
+  text-transform: uppercase;
 }
-
-.wheel div:hover::before {
-  background-color: #fffb52;
-  color: #333;
+.wheel .lastDiv {
+  position: absolute;
+  top: -15px;
+  left: 220px;
+  width: 0;
+  height: 0;
+  transform-origin: 0 100%;
+  cursor: pointer;
+  border-top: 220px solid #a43b24;
+  border-left: 20px solid transparent;
+  border-right: 100px solid transparent;
+  /* background: #fffb52; */
+}
+.wheel .lastDiv span {
+  margin-left: -25px !important;
+}
+.wheel div span {
+  top: -200px;
+  text-align: center;
+  width: 110px;
+  height: 200px;
+  padding-top: 15px;
+  border-radius: 0px;
+  font-weight: 800;
+  color: #fffb52;
+  font-size: 18px;
+}
+.wheel div:hover {
+  border-top: 220px solid black;
+  color: black;
 }
 .wheel div:before {
   content: "";
@@ -626,15 +695,16 @@ label {
   width: 25%;
   height: 25%;
   background: #3f72a6;
-  border: 5px solid #fffb52;
+  /* border: 5px solid #fffb52; */
   transform-origin: 0 100%;
   transform: rotate(calc(-8.75 * 360deg / 9)) skew(calc(360deg / 9 - 90deg));
 }
 
 .wheel div:after {
   position: absolute;
-  top: 18px;
-  left: 10px;
+  top: 10px;
+  padding-top: 10px;
+  left: -10px;
   width: 100px;
   height: 50px;
   z-index: 2;
@@ -643,77 +713,58 @@ label {
   font-weight: bold;
   text-align: center;
   font-family: sans-serif;
-  border:1px solid blue;
+}
+.wheel div .big{
+  transform: rotate(8eg);
+}
+.wheel .small{
+  transform: rotate(100eg);
 }
 
-
-
-.wheel div:nth-of-type(1):after{
-  content: "BIG";
-}
 .wheel div:nth-of-type(1) {
-  transform: rotate(calc(0 * 360deg / 9));
+  transform: rotate(calc(1 * 360deg / 9));
+  z-index: 1;
 }
 
-.wheel div:nth-of-type(2):after{
-  content: "SMALL";
-}
 .wheel div:nth-of-type(2) {
   transform: rotate(calc(2 * 360deg / 9));
+  z-index: 1;
 }
 
-
-.wheel div:nth-of-type(3):after{
-  content: "TIE";
-}
 .wheel div:nth-of-type(3) {
   transform: rotate(calc(3 * 360deg / 9));
+  z-index: 1;
 }
 
-.wheel div:nth-of-type(4):after {
-  content: "ODD";
-}
 .wheel div:nth-of-type(4) {
   transform: rotate(calc(4 * 360deg / 9));
+  z-index: 1;
 }
 
-.wheel div:nth-of-type(5):after {
-  content: "EVEN";
-}
 .wheel div:nth-of-type(5) {
   transform: rotate(calc(5 * 360deg / 9));
+  z-index: 1;
 }
 
-.wheel div:nth-of-type(6):after {
-  content: "HIGH";
-}
 .wheel div:nth-of-type(6) {
   transform: rotate(calc(6 * 360deg / 9));
+  z-index: 1;
 }
 
-.wheel div:nth-of-type(7):after {
-  content: "MID";
-}
 .wheel div:nth-of-type(7) {
   transform: rotate(calc(7 * 360deg / 9));
+  z-index: 1;
 }
 
-.wheel div:nth-of-type(8):after {
-  content: "LOW";
-}
 .wheel div:nth-of-type(8) {
   transform: rotate(calc(8 * 360deg / 9));
+  z-index: 1;
 }
 
-
-.wheel div:nth-of-type(9):after {
-  content: "0-9";
-}
 .wheel div:nth-of-type(9) {
   transform: rotate(calc(9 * 360deg / 9));
+  z-index: 1;
 }
-
-
 
 .instructions {
   position: absolute;
