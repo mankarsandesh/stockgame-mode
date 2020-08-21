@@ -712,7 +712,7 @@ label {
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
-  background-color: white;
+  background-color: #f7f39f;
   padding: 5px;
   position: relative;
   margin: 0;
@@ -720,6 +720,7 @@ label {
 #dot_1 {
   bottom: 25px;
   right: -110px;
+  background-color: #FBD200;
 }
 #dot_2 {
   bottom: 25px;
@@ -762,11 +763,13 @@ label {
 #dot_11 {
   bottom: 150px;
   right: -220px;
+  background-color: #FBD200;
 }
 
 #dot_12 {
   bottom: 220px;
   right: -180px;
+  background-color: #FBD200;
 }
 
 

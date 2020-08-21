@@ -36,14 +36,13 @@ class Game extends Component {
 
           <span class="centre">
             <span className="betClose">
-              <p className="circleDot" id="dot_1"></p>
+              <p className="circleDot" id="dot_1"></p>          
               <p className="circleDot" id="dot_2"></p>
               <p className="circleDot" id="dot_3"></p>
               <p className="circleDot" id="dot_4"></p>
               <p className="circleDot" id="dot_5"></p>
               <p className="circleDot" id="dot_6"></p>
               <p className="circleDot" id="dot_7"></p>
-              
               <p className="circleDot" id="dot_8"></p>
               <p className="circleDot" id="dot_9"></p>
               <p className="circleDot" id="dot_10"></p>
