@@ -590,9 +590,9 @@ label {
   overflow: hidden;
   background: #fffb52;
   border: 15px solid #ecb408;
-  -webkit-box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
--moz-box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
-box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
+  -webkit-box-shadow: -4px 10px 25px -10px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: -4px 10px 25px -10px rgba(0, 0, 0, 0.85);
+  box-shadow: -4px 10px 25px -10px rgba(0, 0, 0, 0.85);
 }
 .wheel span {
   display: block;
@@ -605,33 +605,39 @@ box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
   left: 65px;
   width: 290px;
   height: 290px;
-  background: #fffb52;
-  padding: 0px;  
+
+  padding: 0px;
   z-index: 999;
   text-align: center;
-  -webkit-box-shadow: -1px 2px 20px 1px rgba(0,0,0,0.31);
-  -moz-box-shadow: -1px 2px 20px 1px rgba(0,0,0,0.31);
-  box-shadow: -1px 2px 20px 1px rgba(0,0,0,0.31);
+  -webkit-box-shadow: -1px 2px 20px 1px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: -1px 2px 20px 1px rgba(0, 0, 0, 0.31);
+  box-shadow: -1px 2px 20px 1px rgba(0, 0, 0, 0.31);
+  position: absolute;
 }
 
-.wheel span span {
+.wheel span .betClose {
   width: 230px;
   height: 230px;
- 
+
   background: #fffb52;
   border: 30px solid #ecb408;
-  -webkit-box-shadow: inset 9px -42px 24px 50px rgba(255,255,100,0.52);
-  -moz-box-shadow: inset 9px -42px 24px 50px rgba(255,255,100,0.52);
-  box-shadow: inset 9px -42px 24px 50px rgba(255,255,100,0.52);
+  -webkit-box-shadow: inset 9px -42px 24px 50px rgba(255, 255, 100, 0.52);
+  -moz-box-shadow: inset 9px -42px 24px 50px rgba(255, 255, 100, 0.52);
+  box-shadow: inset 9px -42px 24px 50px rgba(255, 255, 100, 0.52);
 
   text-align: center;
+}
+.betClose span{
+  margin-top:-150px;
+  margin-left: 25px;
 }
 .wheel .centre h4 {
   font-size: 25px;
   color: #a43b24;
   text-transform: uppercase;
   width: 100%;
-  margin: 60px 0 0 0;
+  margin: -25px 0 0 0;
+  position: absolute;
 }
 
 .wheel .centre h1 {
@@ -650,27 +656,15 @@ box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
   height: 0;
   transform-origin: 0 100%;
   cursor: pointer;
-  border-top: 220px solid #a43b24;
+  border-top: 220px solid #354f96;
   border-left: 0px solid transparent;
   border-right: 160px solid transparent;
   /* background: #fffb52; */
   text-transform: uppercase;
 }
-.wheel .lastDiv {
-  position: absolute;
-  top: -15px;
-  left: 220px;
-  width: 0;
-  height: 0;
-  transform-origin: 0 100%;
-  cursor: pointer;
-  border-top: 220px solid #a43b24;
-  border-left: 20px solid transparent;
-  border-right: 100px solid transparent;
-  /* background: #fffb52; */
-}
+
 .wheel .lastDiv span {
-  margin-left: -25px !important;
+  margin-left: 5px !important;
 }
 .wheel div span {
   top: -200px;
@@ -707,17 +701,80 @@ box-shadow: inset 10px 3px 51px 15px rgba(232,168,18,1);
   left: -10px;
   width: 100px;
   height: 50px;
-  z-index: 2;
   color: #fffb52;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
   font-family: sans-serif;
 }
-.wheel div .big{
+
+.circleDot {
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px;
+  background-color: white;
+  padding: 5px;
+  position: relative;
+  margin: 0;
+}
+#dot_1 {
+  bottom: 25px;
+  right: -110px;
+}
+#dot_2 {
+  bottom: 25px;
+  right: -35px;
+}
+#dot_3 {
+  bottom: 0px;
+  right: 8px;
+}
+#dot_4 {
+  bottom: -50px;
+  right: 25px;
+}
+#dot_5 {
+  bottom: -90px;
+  right: 8px;
+}
+#dot_6 {
+  bottom: -115px;
+  right: -40px;
+}
+#dot_7 {
+  bottom: -115px;
+  right: -110px;
+}
+#dot_8 {
+  bottom: -70px;;
+  right: -180px;
+}
+#dot_9 {
+  bottom: -10px;
+  right: -215px;
+}
+
+#dot_10 {
+  bottom: 70px;
+  right: -235px;
+}
+
+#dot_11 {
+  bottom: 150px;
+  right: -220px;
+}
+
+#dot_12 {
+  bottom: 220px;
+  right: -180px;
+}
+
+
+
+.wheel div .big {
   transform: rotate(8eg);
 }
-.wheel .small{
+.wheel .small {
   transform: rotate(100eg);
 }
 

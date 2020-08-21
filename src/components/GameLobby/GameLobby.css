@@ -118,11 +118,11 @@
   align-items: center;
 }
 .gameLobby__StockRule > button {
-  border: 5px solid #e3b846;
+  border: 8px solid #e3b846;
   border-radius: 50%;
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   text-align: center;
   align-items: center;
   color: #e3b846;
@@ -130,9 +130,13 @@
   text-transform: uppercase;
   margin: 0px auto 20px auto;
   cursor: pointer;
+  font-size: 18px;
 }
 .gameLobby__StockRule > button:hover {
-  box-shadow: 0 0 0 3px #e3b846;
+  /* box-shadow: 0 0 0 3px #e3b846; */
+  -webkit-box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
+-moz-box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
+box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
 }
 .gameLobby__StockRule .firstDigit {
   background-color: #303b77;
@@ -150,9 +154,9 @@
   flex: 0.6;
 }
 .gameLobby__Coins {
-  width: 40%;
-  margin: 50px auto;
-  text-align: center;
+  width: 500px;
+  margin: 10% auto;
+  text-align: center !important;
   position: relative;
   display: flex;
   align-items: center;
