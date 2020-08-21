@@ -1,12 +1,15 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import theme from "./theme";
-import { color } from 'styled-system'
+import React, { Component } from 'react';
+import config from '../../config/config.global';
+class Test extends Component {
+  render() {
+    return (
+      <div>
+        
+        { config.authUser }
 
-const App = (props) => (
-  <ThemeProvider theme={theme}>
-   
-  </ThemeProvider>
-);
+      </div>
+    );
+  }
+}
 
-export default App;
+export default Test;

@@ -12,16 +12,16 @@ import Test from './components/Test/Test';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
+      {/* <div className="App"> */}
+        {/* <Header /> */}
 
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route path="/test" component={Test}></Route>
         </Switch>
 
-        <Footer />
-      </div>
+        {/* <Footer /> */}
+      {/* </div> */}
     </BrowserRouter>
   );
 }
