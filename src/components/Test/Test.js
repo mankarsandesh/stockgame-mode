@@ -5,7 +5,7 @@ class Test extends Component {
     return (
       <div>
         
-        { config.authUser }
+        { process.env.NODE_ENV }
 
       </div>
     );
