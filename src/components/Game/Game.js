@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import "./Game.css";
-class Game extends Component {
+class Game extends  React.Component  {
+  constructor(props) {
+    super(props);
+    this.state = { gameRule: props.gameRuleValue }
+  }
+
+  
+
+
+
   render() {
     const numbers = [1, 2, 3, 4];
     return (
+  
       <div>
-        <div class="wheel">
+            { this.state.gameRule}
+        <div class={"wheel wheel"+this.state.gameRule}>
           <div>
             <span>Big</span>
           </div>

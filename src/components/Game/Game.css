@@ -648,7 +648,8 @@ label {
   font-weight: 800;
   margin: 0;
 }
-.wheel div {
+
+.wheelFirstDigit div{
   position: absolute;
   top: -15px;
   left: 210px;
@@ -663,6 +664,50 @@ label {
   text-transform: uppercase;
 }
 
+.wheelLastDigit div{
+  position: absolute;
+  top: -15px;
+  left: 210px;
+  width: 0;
+  height: 0;
+  transform-origin: 0 100%;
+  cursor: pointer;
+  border-top: 220px solid #354f96;
+  border-left: 0px solid transparent;
+  border-right: 160px solid transparent;
+  /* background: #fffb52; */
+  text-transform: uppercase;
+}
+
+.wheelBothDigit div{
+  position: absolute;
+  top: -15px;
+  left: 210px;
+  width: 0;
+  height: 0;
+  transform-origin: 0 100%;
+  cursor: pointer;
+  border-top: 220px solid #354f96;
+  border-left: 0px solid transparent;
+  border-right: 160px solid transparent;
+  /* background: #fffb52; */
+  text-transform: uppercase;
+}
+
+.wheelTwoDigit div{
+  position: absolute;
+  top: -15px;
+  left: 210px;
+  width: 0;
+  height: 0;
+  transform-origin: 0 100%;
+  cursor: pointer;
+  border-top: 220px solid #354f96;
+  border-left: 0px solid transparent;
+  border-right: 160px solid transparent;
+  /* background: #fffb52; */
+  text-transform: uppercase;
+}
 .wheel .lastDiv span {
   margin-left: 5px !important;
 }

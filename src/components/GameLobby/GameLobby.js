@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./GameLobby.css";
 import MoneyIcon from "@material-ui/icons/Money";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -10,8 +10,22 @@ import three from "shared/images/chip/three.png";
 import four from "shared/images/chip/four.png";
 import five from "shared/images/chip/five.png";
 
-import Game from 'components/Game/Game';
-class GameLobby extends React.Component {
+import Game from "components/Game/Game";
+class GameLobby extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { gameValue: "FirstDigit" };
+  }
+
+  handleChange(ruleName) {
+    this.setState(({
+      gameValue: ruleName
+    }))
+    // this.setState({ gameValue: ruleName });
+    console.log(ruleName);
+    console.log(this.state.gameValue);
+  }
+
   render() {
     return (
       <div className="gameLobby__wrapper">
@@ -71,15 +85,35 @@ class GameLobby extends React.Component {
           </div>
           <div className="gameLobby__GameRule">
             <div className="gameLobby__GameRuleCircle">
-              <Game />
-              
+            {this.state.gameValue}
+              <Game gameRuleValue={this.state.gameValue} />
             </div>
           </div>
           <div className="gameLobby__StockRule">
-            <button className="firstDigit">First Digit</button>
-            <button className="lastDigit">Last Digit</button>
-            <button className="bothDigit">Both Digit</button>
-            <button className="twoDigit">Two Digit</button>
+            <button
+              className="firstDigit"
+              onClick={() => this.handleChange("FirstDigit")}
+            >
+              First Digit
+            </button>
+            <button
+              className="lastDigit"
+              onClick={() => this.handleChange("LastDigit")}
+            >
+              Last Digit
+            </button>
+            <button
+              className="bothDigit"
+              onClick={() => this.handleChange("BothDigit")}
+            >
+              Both Digit
+            </button>
+            <button
+              className="twoDigit"
+              onClick={() => this.handleChange("TwoDigit")}
+            >
+              Two Digit
+            </button>
           </div>
         </div>
 
