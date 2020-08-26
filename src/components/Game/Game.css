@@ -672,7 +672,7 @@ label {
   height: 0;
   transform-origin: 0 100%;
   cursor: pointer;
-  border-top: 220px solid #354f96;
+  border-top: 220px solid #653e21;
   border-left: 0px solid transparent;
   border-right: 160px solid transparent;
   /* background: #fffb52; */
@@ -687,7 +687,7 @@ label {
   height: 0;
   transform-origin: 0 100%;
   cursor: pointer;
-  border-top: 220px solid #354f96;
+  border-top: 220px solid #2f5f2a;
   border-left: 0px solid transparent;
   border-right: 160px solid transparent;
   /* background: #fffb52; */
@@ -702,7 +702,10 @@ label {
   height: 0;
   transform-origin: 0 100%;
   cursor: pointer;
-  border-top: 220px solid #354f96;
+  border-top: 220px solid #a72a2c
+  
+  
+  ;
   border-left: 0px solid transparent;
   border-right: 160px solid transparent;
   /* background: #fffb52; */

@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import "./Game.css";
-class Game extends  React.Component  {
+class Game extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { gameRule: props.gameRuleValue }
+    this.state = { gameRule: props.gameRuleValue };
   }
 
-  
-
-
+  componentWillReceiveProps(gameRuleValue) {
+    console.log("Component WILL RECIEVE PROPS!");
+  }
 
   render() {
     const numbers = [1, 2, 3, 4];
     return (
-  
       <div>
-            { this.state.gameRule}
-        <div class={"wheel wheel"+this.state.gameRule}>
+        <div className={"wheel wheel" + this.props.gameRuleValue}>
           <div>
             <span>Big</span>
           </div>
@@ -45,9 +43,9 @@ class Game extends  React.Component  {
             <span>0-99</span>
           </div>
 
-          <span class="centre">
+          <span className="centre">
             <span className="betClose">
-              <p className="circleDot" id="dot_1"></p>          
+              <p className="circleDot" id="dot_1"></p>
               <p className="circleDot" id="dot_2"></p>
               <p className="circleDot" id="dot_3"></p>
               <p className="circleDot" id="dot_4"></p>

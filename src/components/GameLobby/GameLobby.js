@@ -18,12 +18,9 @@ class GameLobby extends Component {
   }
 
   handleChange(ruleName) {
-    this.setState(({
-      gameValue: ruleName
-    }))
-    // this.setState({ gameValue: ruleName });
-    console.log(ruleName);
-    console.log(this.state.gameValue);
+    this.setState({
+      gameValue: ruleName,
+    });
   }
 
   render() {
@@ -85,7 +82,6 @@ class GameLobby extends Component {
           </div>
           <div className="gameLobby__GameRule">
             <div className="gameLobby__GameRuleCircle">
-            {this.state.gameValue}
               <Game gameRuleValue={this.state.gameValue} />
             </div>
           </div>
