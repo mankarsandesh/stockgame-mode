@@ -10,8 +10,9 @@ import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import Button from "@material-ui/core/Button";
 
 import Invitation from "components/Invitation/Invitation";
+import Pusher from "pusher-js";
 
-class Footer extends Component {
+export default class Footer extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,6 +21,30 @@ class Footer extends Component {
   }
   operation() {
     this.setState({ showMe: !this.state.showMe });
+  }
+
+  componentDidMount() {
+    console.log("Mounted component message");
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher({
+      broadcaster: "pusher",
+      key: "GYXMAKGDYAWDW4K1C6HWWQHXH2W",
+      wsHost: "uattesting.equitycapitalgaming.com",
+      wsPort: 6001,
+      disableStats: true,
+      auth: {
+        headers: "Basic VG5rd2ViQXBpOlRlc3QxMjMh"
+      }
+    });
+
+    var channel = pusher.subscribe(
+      "stockListOnly.ef60e64b-dc17-4ff1-9f22-a177c6f1c204"
+    );
+    channel.bind("stockListOnly", function (data) {
+      console.log(data, "data come");
+    });
   }
 
   render() {
@@ -93,5 +118,3 @@ class Footer extends Component {
     );
   }
 }
-
-export default Footer;
