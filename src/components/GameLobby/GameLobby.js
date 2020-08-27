@@ -38,30 +38,43 @@ class GameLobby extends Component {
             </div>
           </div>
           <div className="gameLobby__StockRule">
-            <button
-              className="firstDigit"
+            {this.state.gameValue}
+            <span
+              id="firstDigit"
+              className={
+                this.state.gameValue === "FirstDigit" ? " activeButton" : ""
+              }
               onClick={() => this.handleChange("FirstDigit")}
             >
               First Digit
-            </button>
-            <button
-              className="lastDigit"
+            </span>
+            <span
+              id="lastDigit"
+              className={
+                this.state.gameValue === "LastDigit" ? " activeButton" : ""
+              }
               onClick={() => this.handleChange("LastDigit")}
             >
               Last Digit
-            </button>
-            <button
-              className="bothDigit"
+            </span>
+            <span
+              id="bothDigit"
+              className={
+                this.state.gameValue === "BothDigit" ? " activeButton" : ""
+              }
               onClick={() => this.handleChange("BothDigit")}
             >
               Both Digit
-            </button>
-            <button
-              className="twoDigit"
+            </span>
+            <span
+              id="twoDigit"
+              className={
+                this.state.gameValue === "TwoDigit" ? " activeButton" : ""
+              }
               onClick={() => this.handleChange("TwoDigit")}
             >
               Two Digit
-            </button>
+            </span>
           </div>
         </div>
 

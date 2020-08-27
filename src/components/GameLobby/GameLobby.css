@@ -117,7 +117,7 @@
   flex: 0.2;
   align-items: center;
 }
-.gameLobby__StockRule > button {
+.gameLobby__StockRule > span {
   border: 8px solid #e3b846;
   border-radius: 50%;
   display: flex;
@@ -130,32 +130,37 @@
   text-transform: uppercase;
   margin: 0px auto 20px auto;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
 }
-.gameLobby__StockRule > button:hover {
+.gameLobby__StockRule > span:hover {
   /* box-shadow: 0 0 0 3px #e3b846; */
-  -webkit-box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
--moz-box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
-box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
+  -webkit-box-shadow: -2px 10px 44px 0px rgba(255, 188, 20, 1);
+  -moz-box-shadow: -2px 10px 44px 0px rgba(255, 188, 20, 1);
+  box-shadow: -2px 10px 44px 0px rgba(255, 188, 20, 1);
 }
-.gameLobby__StockRule .firstDigit {
+.gameLobby__StockRule #firstDigit {
   background-color: #303b77;
 }
-.gameLobby__StockRule .lastDigit {
+.gameLobby__StockRule #lastDigit {
   background-color: #653e21;
 }
-.gameLobby__StockRule .bothDigit {
+.gameLobby__StockRule #bothDigit {
   background-color: #2f5f2a;
 }
-.gameLobby__StockRule .twoDigit {
+.gameLobby__StockRule #twoDigit {
   background-color: #a72a2c;
 }
 .gameLobby__GameRule {
   flex: 0.6;
 }
+.activeButton{
+    -webkit-box-shadow: -2px 10px 44px 0px rgba(255, 188, 20, 1);
+    -moz-box-shadow: -2px 10px 44px 0px rgba(255, 188, 20, 1);
+    box-shadow: -2px 10px 44px 0px rgba(255, 188, 20, 1);
+}
 .gameLobby__Coins {
   width: 500px;
-  margin: 10% auto;
+  margin: 5% auto;
   text-align: center !important;
   position: relative;
   display: flex;
@@ -193,12 +198,10 @@ box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
   box-shadow: 0px 1px 25px 5px rgba(245, 217, 139, 1);
 }
 
-
-
 .plate {
   background-color: gray;
   width: 350px;
-  height:350px;
+  height: 350px;
   margin: 12px;
   border-radius: 50%;
   position: relative;
@@ -301,7 +304,6 @@ box-shadow: -2px 10px 44px 0px rgba(255,188,20,1);
     border-radius: 0;
   }
 
- 
   &.rest:before {
     transition: top 0.5s ease-in, right 0.5s ease-in, bottom 0.5s ease-in,
       left 0.5s ease-in;
