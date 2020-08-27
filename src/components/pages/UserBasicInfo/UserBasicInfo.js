@@ -120,7 +120,7 @@ function UserBasicInfo() {
           direction="column"
           alignItems="center"
         >
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt="User Profile" />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <p className={classes.accountStatus}>online Status : 2 Hours</p>
           <div className={classes.userAccountBalance}>

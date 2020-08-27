@@ -2,7 +2,7 @@ import React from "react";
 import "./Settings.css";
 
 import { withStyles } from "@material-ui/core/styles";
-import { purple, red } from "@material-ui/core/colors";
+import {  red } from "@material-ui/core/colors";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";

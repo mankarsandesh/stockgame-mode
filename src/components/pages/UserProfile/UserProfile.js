@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Grid,
-  Paper,
   makeStyles,
   createStyles,
   MenuItem,
@@ -128,7 +127,7 @@ function UserProfile() {
       <Grid container spacing={3}>
         <Grid item xs={6}>
           <div className={classes.userAccountLeft}>
-            <img src={userLogo} className={classes.userProfileImage} />
+            <img src={userLogo} className={classes.userProfileImage} alt="user Profile"/>
             <div className={classes.userAccountName}>
               <h2 className={classes.accountName}>Sandesh Mankar</h2>
               <p className={classes.accountStatus}>

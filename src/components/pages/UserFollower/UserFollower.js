@@ -2,15 +2,10 @@ import React from "react";
 import {
   makeStyles,
   createStyles,
-  Grid,
   Paper,
-  List,
-  ListItem,
-  Box,
   Button,
 } from "@material-ui/core";
 import userLogo from "shared/images/logo.png";
-import { grid } from "styled-system";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -87,61 +82,61 @@ function UserFollower() {
       <h2>My Followers</h2>
       <div spacing={2} direction="row" className={classes.flexContainer}>
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.unFollowButton}>unFollow </Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.unFollowButton}>unFollow </Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>
 
         <Paper className={classes.userListCard}>
-          <img src={userLogo} className={classes.userProfileImage} />
+          <img src={userLogo} className={classes.userProfileImage} alt={userLogo} />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <Button className={classes.followButton}>Follow Bet</Button>
         </Paper>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Game.css";
 class Game extends React.Component {
   constructor(props) {
@@ -11,7 +11,6 @@ class Game extends React.Component {
   }
 
   render() {
-    const numbers = [1, 2, 3, 4];
     return (
       <div>
         <div className={"wheel wheel" + this.props.gameRuleValue}>

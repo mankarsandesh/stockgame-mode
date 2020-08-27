@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 import "./Model.css";
 
 import { Box, Paper, Tabs, Tab } from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
 import PropTypes from "prop-types";
 
 import GameRule from "components/pages/GameRule/GameRule";
@@ -60,19 +59,19 @@ class ModelView extends React.Component {
   render() {
     return (
       <Box className="header__AllPage">
-        {this.state.pageName == "menuLeaderboard" ? (
+        {this.state.pageName === "menuLeaderboard" ? (
           <Paper>
             <Leaderboard />
           </Paper>
-        ) : this.state.pageName == "menuChart" ? (
+        ) : this.state.pageName === "menuChart" ? (
           <Paper>
             <ChartPage />
           </Paper>
-        ) : this.state.pageName == "UserProfile" ? (
+        ) : this.state.pageName === "UserProfile" ? (
           <Paper>
             <UserProfile />
           </Paper>
-        ) : this.state.pageName == "menuProfile" ? (
+        ) : this.state.pageName === "menuProfile" ? (
           <Paper>
             <Tabs
               className="header__AllPageTabs"

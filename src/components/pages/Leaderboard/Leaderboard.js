@@ -3,7 +3,6 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import ButtonBase from "@material-ui/core/ButtonBase";
 import { Button } from "@material-ui/core";
 import EventIcon from "@material-ui/icons/Event";
 
@@ -119,13 +118,11 @@ const useStyles = makeStyles((theme: Theme) =>
     sortingLeft: {
       alignItems: "flex-start",
       display: "flex",
-      alignItems: "center",
     },
     sortingLeaders: {
       alignItems: "flex-end",
       display: "flex",
       color: "white",
-      alignItems: "center",
     },
     ratingButton: {
       color: "white",
@@ -176,11 +173,11 @@ export default function ComplexGrid() {
           <h4>Top 10 Leaders <small className={classes.sortingText}>(Sorting by {sortButton})</small></h4> 
         </Grid>
         <Grid item xs={4} className={classes.sortingLeaders}>
-          <Button onClick={() => sortingRanking('weekly')} className={ sortButton == 'weekly' ? classes.ratingButtonActive : classes.ratingButton}>
+          <Button onClick={() => sortingRanking('weekly')} className={ sortButton === 'weekly' ? classes.ratingButtonActive : classes.ratingButton}>
             {" "}
             <EventIcon /> Weekly Ranking 
           </Button>
-          <Button onClick={() => sortingRanking('monthly')}  className={sortButton != 'weekly' ? classes.ratingButtonActive : classes.ratingButton}>
+          <Button onClick={() => sortingRanking('monthly')}  className={sortButton !== 'weekly' ? classes.ratingButtonActive : classes.ratingButton}>
             {" "}
             <EventIcon /> Monthly Ranking
           </Button>

@@ -26,6 +26,8 @@ export default function RoadMap() {
       case "bothDigit": {
         return "button bothDigit";
       }
+      default:
+        return "button firstDigit";
     }
   };
 
