@@ -663,6 +663,9 @@ label {
   /* background: #fffb52; */
   text-transform: uppercase;
 }
+.wheelFirstDigit .activeGameRule{
+  border-top: 220px solid black;
+}
 
 .wheelLastDigit div{
   position: absolute;

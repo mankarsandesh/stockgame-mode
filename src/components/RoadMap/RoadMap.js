@@ -37,7 +37,7 @@ export default function RoadMap() {
     <div className="roadMapWrapper">
       {allRuleName.map((ruleName) => (
         <span
-          className={getClass(ruleName)}
+          className={getClass(ruleName)}  key={ruleName}
           onClick={() => handleOpen(ruleName)}
         >
           {ruleName}

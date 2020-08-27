@@ -16,9 +16,9 @@ function createTable() {
     }
     //Create the parent and add the children
     table.push(
-      <tbody>
-        <tr className="section" key={children}>
-          {children}
+      <tbody key={i}>
+        <tr className="section" >
+          {children} 
         </tr>
       </tbody>
     );
