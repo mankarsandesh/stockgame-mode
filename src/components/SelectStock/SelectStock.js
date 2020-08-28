@@ -11,21 +11,21 @@ class SelectStock extends Component {
         </div>
         <h2 className="gameLobby__stockName">select stock</h2>
         <div className="gameLobby__StockSelect">
-          <Select className="gameLobby__SelectedStockType" value=" ">
+          <Select className="gameLobby__SelectedStockType"  disableUnderline value=" ">
             <MenuItem value=" ">Stock Type</MenuItem>
             <MenuItem value={10}>BTC1</MenuItem>
             <MenuItem value={20}>SHOOOO</MenuItem>
             <MenuItem value={30}>SHOOOO32</MenuItem>
           </Select>
 
-          <Select className="gameLobby__SelectedStock" value=" ">
+          <Select className="gameLobby__SelectedStock"  disableUnderline value=" ">
             <MenuItem value=" ">Select Stock</MenuItem>
             <MenuItem value={10}>BTC1</MenuItem>
             <MenuItem value={20}>SHOOOO</MenuItem>
             <MenuItem value={30}>SHOOOO32</MenuItem>
           </Select>
 
-          <Select className="gameLobby__SelectedStockTime" value=" ">
+          <Select className="gameLobby__SelectedStockTime"  disableUnderline value=" ">
             <MenuItem value=" ">Stock</MenuItem>
             <MenuItem value={10}>BTC1</MenuItem>
             <MenuItem value={20}>SHOOOO</MenuItem>

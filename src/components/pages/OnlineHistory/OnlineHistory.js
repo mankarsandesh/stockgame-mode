@@ -6,23 +6,24 @@ import Chart from "components/Chart/ChartJs";
 const useStyles = (theme) => ({
   inputSelect: {
     display: "flex",
-    border: "3px solid #FFF",
+    border: "2px solid #FFF",
     backgroundColor: "#333",
     color: "#FFF !important",
     borderRadius: "30px",
-    padding: "3px 15px",
+    padding: "7px 15px",
     margin: "0px 15px",
     fontColor: "#FFF !important",
+    cursor:'pointer'
   },
   goButton: {
     borderRadius: "30px",
-    padding: "4px 20px",
+    padding: "3px 20px",
     border: "3px solid #e7be4e",
     color: "#e7be4e",
     backgroundColor: "#982229",
     fontWeight: "800",
-    fontSize: "16px",
-    marginTop: "18px",
+    fontSize: "14px",
+    marginTop: "40px",
   },
   inputLabel: {
     color: "grey",
@@ -53,7 +54,7 @@ class OnlineHistory extends Component {
         <h2>Online History</h2>
         <Grid
           item
-          xs={6}
+          xs={7}
           container
           direction="row"
           justify="center"
@@ -65,9 +66,9 @@ class OnlineHistory extends Component {
               id="date"
               type="date"
               defaultValue="2017-05-24"
-              className={classes.inputSelect}
               InputProps={{
-                classes: { input: classes.input },
+                disableUnderline: true,
+                classes: { input: classes.inputSelect },
               }}
             />
           </Grid>
@@ -78,7 +79,10 @@ class OnlineHistory extends Component {
               id="date"
               type="date"
               defaultValue="2017-05-24"
-              className={classes.inputSelect}
+              InputProps={{
+                disableUnderline: true,
+                classes: { input: classes.inputSelect },
+              }}
             />
           </Grid>
           <Grid item xs={2}>

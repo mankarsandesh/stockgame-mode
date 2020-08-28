@@ -6,6 +6,7 @@ import {
   Select,
   MenuItem,
   Button,
+  TextField,
 } from "@material-ui/core";
 import userLogo from "shared/images/logo.png";
 
@@ -62,9 +63,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#333",
       color: "#FFF !important",
       borderRadius: "30px",
-      padding: "10px",    
+      padding: "10px 15px",
       marginBottom: "20px",
-      width:'100%'
+      width: "300px",
     },
     inputSelect: {
       display: "flex",
@@ -73,9 +74,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#333",
       color: "#FFF !important",
       borderRadius: "30px",
-      padding: "5px",
+      padding: "4px 12px",
       marginBottom: "20px",
-      width:'340px'
+      width: "340px",
     },
     inputLabel: {
       fontWeight: "800",
@@ -113,14 +114,12 @@ function UserBasicInfo() {
     <div className="header__AllPageTabPanel">
       <h2>Basic Information</h2>
       <Grid container>
-        <Grid
-          item
-          xs={4}
-          container
-          direction="column"
-          alignItems="center"
-        >
-          <img src={userLogo} className={classes.userProfileImage} alt="User Profile" />
+        <Grid item xs={4} container direction="column" alignItems="center">
+          <img
+            src={userLogo}
+            className={classes.userProfileImage}
+            alt="User Profile"
+          />
           <div className={classes.accountName}>Sandesh Mankar</div>
           <p className={classes.accountStatus}>online Status : 2 Hours</p>
           <div className={classes.userAccountBalance}>
@@ -140,27 +139,61 @@ function UserBasicInfo() {
               <label className={classes.inputLabel}>User Name</label>
             </Grid>
             <Grid item xs={8}>
-              <input type="text " className={classes.inputText} />
+            <TextField
+                type="text"
+                autoComplete="off"
+                InputProps={{
+                  disableUnderline: true,
+                  classes: { input: classes.inputText },
+                  form: {
+                    autoComplete: "off",
+                  },
+                }}
+              />
             </Grid>
 
             <Grid item xs={4}>
               <label className={classes.inputLabel}>First Name</label>
             </Grid>
             <Grid item xs={8}>
-              <input type="text " className={classes.inputText} />
+            <TextField
+                type="text"
+                autoComplete="off"
+                InputProps={{
+                  disableUnderline: true,
+                  classes: { input: classes.inputText },
+                  form: {
+                    autoComplete: "off",
+                  },
+                }}
+              />
             </Grid>
             <Grid item xs={4}>
               <label className={classes.inputLabel}>Last Name</label>
             </Grid>
             <Grid item xs={8}>
-              <input type="text " className={classes.inputText} />
+              <TextField
+                type="text"
+                autoComplete="off"
+                InputProps={{
+                  disableUnderline: true,
+                  classes: { input: classes.inputText },
+                  form: {
+                    autoComplete: "off",
+                  },
+                }}
+              />
             </Grid>
 
             <Grid item xs={4}>
               <label className={classes.inputLabel}>Gender</label>
             </Grid>
             <Grid item xs={8}>
-              <Select className={classes.inputSelect} value=" ">
+              <Select
+                className={classes.inputSelect}
+                value=" "
+                disableUnderline
+              >
                 <MenuItem value=" ">Gender</MenuItem>
                 <MenuItem value={10}>Male</MenuItem>
                 <MenuItem value={20}>Female</MenuItem>
@@ -171,17 +204,31 @@ function UserBasicInfo() {
               <label className={classes.inputLabel}>Email</label>
             </Grid>
             <Grid item xs={8}>
-              <input type="text " className={classes.inputText} />
+            <TextField
+                type="text"
+                autoComplete="off"
+                InputProps={{
+                  disableUnderline: true,
+                  classes: { input: classes.inputText },
+                  form: {
+                    autoComplete: "off",
+                  },
+                }}
+              />
             </Grid>
 
             <Grid item xs={4}>
               <label className={classes.inputLabel}>Country</label>
             </Grid>
             <Grid item xs={8}>
-              <Select className={classes.inputSelect} value=" ">
+              <Select
+                className={classes.inputSelect}
+                value=" "
+                disableUnderline
+              >
                 <MenuItem value=" ">Select Country</MenuItem>
-                <MenuItem value={10}>Male</MenuItem>
-                <MenuItem value={20}>Female</MenuItem>
+                <MenuItem value={10}>Laos</MenuItem>
+                <MenuItem value={20}>India</MenuItem>
               </Select>
             </Grid>
 

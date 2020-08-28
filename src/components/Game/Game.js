@@ -18,10 +18,6 @@ class Game extends React.Component {
       this.state.gameType.splice(index, 1)
       this.setState({gameType:  this.state.gameType});
     }
-
-    
-   
-   
   }
 
   findValueInArray(ruleName){
@@ -30,7 +26,6 @@ class Game extends React.Component {
   componentDidMount(){
     console.log("Mounted");
   }
-
   render() {
     return (
       <div>
@@ -92,8 +87,9 @@ class Game extends React.Component {
 
   componentDidUpdate(){
     console.log("Update Component");
+    console.log(this.props);
    
-    console.log(this.state.gameType);
+    console.log(this.state);
   }
 }
 
