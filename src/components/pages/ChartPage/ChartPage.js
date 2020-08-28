@@ -31,6 +31,12 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "center",
       textTransform: "uppercase",
       cursor: "pointer",
+      '&:before': {
+        borderColor: 'white',
+    },
+    '&:after': {
+        borderColor: 'white',
+    }
     },
     selectedInputStock: {
       display: "flex",
@@ -104,6 +110,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize:'20px',
       color:'#FFF',
       margin:'0'
+    },
+    icon: {
+      color: "blue"
     }
   })
 );
@@ -123,7 +132,7 @@ function ChartPage() {
               className={classes.selectedInputCategory}
               disableUnderline
               value=" "
-              MenuProps={{ classes: { paper: classes.dropdownStyleCategory } }}
+              MenuProps={{ classes: { paper: classes.dropdownStyleCategory  } ,  icon: classes.icon }}
             >
               <MenuItem value=" ">Stock Type</MenuItem>
               <MenuItem value={10}>BTC1</MenuItem>
