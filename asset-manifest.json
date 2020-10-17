@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/stockgame-mode/static/css/main.3921ccbf.chunk.css",
+    "main.js": "/stockgame-mode/static/js/main.3c1221bb.chunk.js",
+    "main.js.map": "/stockgame-mode/static/js/main.3c1221bb.chunk.js.map",
+    "runtime-main.js": "/stockgame-mode/static/js/runtime-main.38d029df.js",
+    "runtime-main.js.map": "/stockgame-mode/static/js/runtime-main.38d029df.js.map",
+    "static/js/2.5f95d00d.chunk.js": "/stockgame-mode/static/js/2.5f95d00d.chunk.js",
+    "static/js/2.5f95d00d.chunk.js.map": "/stockgame-mode/static/js/2.5f95d00d.chunk.js.map",
+    "index.html": "/stockgame-mode/index.html",
+    "precache-manifest.187926971fdc3de3ecf990ee4a2af59c.js": "/stockgame-mode/precache-manifest.187926971fdc3de3ecf990ee4a2af59c.js",
+    "service-worker.js": "/stockgame-mode/service-worker.js",
+    "static/css/main.3921ccbf.chunk.css.map": "/stockgame-mode/static/css/main.3921ccbf.chunk.css.map",
+    "static/js/2.5f95d00d.chunk.js.LICENSE.txt": "/stockgame-mode/static/js/2.5f95d00d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/stockgame-mode/static/media/background.afeffaf9.jpg",
+    "static/media/five.png": "/stockgame-mode/static/media/five.29c69198.png",
+    "static/media/four.png": "/stockgame-mode/static/media/four.3d43d634.png",
+    "static/media/one.png": "/stockgame-mode/static/media/one.b337b3e4.png",
+    "static/media/three.png": "/stockgame-mode/static/media/three.e6122102.png",
+    "static/media/two.png": "/stockgame-mode/static/media/two.b5323aad.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38d029df.js",
+    "static/js/2.5f95d00d.chunk.js",
+    "static/css/main.3921ccbf.chunk.css",
+    "static/js/main.3c1221bb.chunk.js"
+  ]
+}
