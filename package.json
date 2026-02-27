@@ -52,6 +52,6 @@
     ]
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^6.0.3"
+    "copy-webpack-plugin": "^13.0.1"
   }
 }
